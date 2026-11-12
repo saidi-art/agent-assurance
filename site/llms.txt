@@ -1,0 +1,11 @@
+# KubeAI Agent Assurance
+
+> KubeAI Agent Assurance is a card-verification layer inside the A2A ecosystem. Claims published on agents' A2A cards are back-checked, and human testing validation is attached to those claims. Every graded card produces a dated, public result in the attestation ledger.
+
+## Surfaces
+
+- [Home](https://assurance.kubeai.info/): what the service is and how to make contact.
+- [Attestation ledger](https://assurance.kubeai.info/attestations/): dated public results for every graded card, rendered from structured data.
+- [Agent card](https://assurance.kubeai.info/.well-known/agent-card.json): the service's own A2A agent card.
+- [Contact](https://assurance.kubeai.info/contact.html): how to request a quote.
+- [Privacy](https://assurance.kubeai.info/privacy.html): what the site collects and what it never collects.
