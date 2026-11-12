@@ -1,0 +1,30 @@
+{
+  "name": "KubeAI Agent Assurance",
+  "description": "Scaffold card published at milestone M1 so the well-known URL exists. Final A2A v1.0 card content is supplied at milestone M4.",
+  "url": "https://assurance.kubeai.info",
+  "provider": {
+    "organization": "KubeAI",
+    "url": "https://kubeai.info"
+  },
+  "version": "0.1.0-scaffold",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "request-attestation",
+      "name": "Request attestation",
+      "description": "Automated attestation of an A2A agent card. Free.",
+      "tags": ["attestation", "a2a", "card-verification"]
+    },
+    {
+      "id": "request-human-validation",
+      "name": "Request human validation",
+      "description": "Human testing validation of the claims on an A2A agent card. Paid.",
+      "tags": ["validation", "human-testing", "a2a"]
+    }
+  ]
+}
