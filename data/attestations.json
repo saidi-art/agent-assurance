@@ -1,814 +1,3614 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-11-13T13:45:00Z",
-  "attestations": [
+ "schema_version": 1,
+ "generated_at": "2026-11-13T14:50:00Z",
+ "attestations": [
+  {
+   "attestation_id": "att-2026-0014",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Grease Cleaning",
+    "url": "https://greasecleaning.fyi",
+    "card_url": "https://greasecleaning.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://greasecleaning.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
     {
-      "attestation_id": "att-2026-0011",
-      "published_at": "2026-11-13T13:45:00Z",
-      "specimen": false,
-      "source_registry": "a2aregistry.org",
-      "agent": {
-        "name": "HVAC Pros",
-        "url": "https://hvacpros.fyi",
-        "card_url": "https://hvacpros.fyi/.well-known/agent-card.json",
-        "registry_entry_url": "https://hvacpros.fyi/.well-known/agent-card.json",
-        "last_seen": "2026-11-13"
-      },
-      "summary": {
-        "claims_total": 4,
-        "claims_pass": 4,
-        "claims_fail": 0,
-        "claims_unverified": 0,
-        "score": 100
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "Answers a plain-text question with the HVAC contractors matching its words: the number of matches and up to 5 of them with their page URL",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "live probe of the /a2a find-listings skill",
-            "url": "evidence/att-2026-0011.md",
-            "captured_at": "2026-11-13T13:36:08Z"
-          },
-          "note": "Probe 'List HVAC contractors in the installation category': answered '431 HVAC contractors match' with 5 named listings and structured data (task completed in 747 ms)."
-        },
-        {
-          "id": "c2",
-          "claim": "The listing pages it returns exist and match the named company",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "HTTP spot-check of returned listing URLs",
-            "url": "evidence/att-2026-0011.md",
-            "captured_at": "2026-11-13T13:40:00Z"
-          },
-          "note": "3 of 3 returned URLs returned HTTP 200 with page titles matching the company names (Superior Gas Installations & Service Ltd; Gandy Installations)."
-        },
-        {
-          "id": "c3",
-          "claim": "describe-directory states how many contractors it lists and which categories",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "live probe of the describe-directory skill",
-            "url": "evidence/att-2026-0011.md",
-            "captured_at": "2026-11-13T13:41:00Z"
-          },
-          "note": "Probe answered: 755 contractors listed, 5 categories (HVAC maintenance, AC repair, Furnace repair, HVAC installation, Ductwork); 431 word-matches inside 755 total is consistent."
-        },
-        {
-          "id": "c4",
-          "claim": "Data provenance is disclosed: each record keeps the licence of its source, listed in meta.sources",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "probe response metadata",
-            "url": "evidence/att-2026-0011.md",
-            "captured_at": "2026-11-13T13:36:08Z"
-          },
-          "note": "Response meta.sources names the data sources with licences and attribution text."
-        }
-      ]
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List cleaning companies in the Hood cleaning category': answered '68 matches' with listing URLs (task completed)."
     },
     {
-      "attestation_id": "att-2026-0012",
-      "published_at": "2026-11-13T13:45:00Z",
-      "specimen": false,
-      "source_registry": "a2aregistry.org",
-      "agent": {
-        "name": "Plumber Pros",
-        "url": "https://plumberpros.fyi",
-        "card_url": "https://plumberpros.fyi/.well-known/agent-card.json",
-        "registry_entry_url": "https://plumberpros.fyi/.well-known/agent-card.json",
-        "last_seen": "2026-11-13"
-      },
-      "summary": {
-        "claims_total": 4,
-        "claims_pass": 4,
-        "claims_fail": 0,
-        "claims_unverified": 0,
-        "score": 100
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "Answers a plain-text question with the plumbers matching its words: the number of matches and up to 5 of them with their page URL",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "live probe of the /a2a find-listings skill",
-            "url": "evidence/att-2026-0012.md",
-            "captured_at": "2026-11-13T13:36:09Z"
-          },
-          "note": "Probe 'List plumbers in the emergency repair category': answered '1 plumber match' with the listing and structured data (task completed in 728 ms)."
-        },
-        {
-          "id": "c2",
-          "claim": "The listing pages it returns exist and match the named company",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "HTTP spot-check of returned listing URLs",
-            "url": "evidence/att-2026-0012.md",
-            "captured_at": "2026-11-13T13:40:00Z"
-          },
-          "note": "1 of 1 returned URL returned HTTP 200 with the page title matching (A-1 Plumbng & Emergency Rooter, Walla Walla WA)."
-        },
-        {
-          "id": "c3",
-          "claim": "Word-based matching behaves as described: matches are found by place, category or words",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "live probe",
-            "url": "evidence/att-2026-0012.md",
-            "captured_at": "2026-11-13T13:36:09Z"
-          },
-          "note": "The phrase 'emergency repair' matched by words rather than the category taxonomy; the response discloses query.q used. Behaviour matches the card's wording, not a synonym engine."
-        },
-        {
-          "id": "c4",
-          "claim": "Data provenance is disclosed: meta.sources carries licences (Overture Maps Places, CDLA-Permissive-2.0, release 2026-10-21.0) and an attribution requirement",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "probe response metadata",
-            "url": "evidence/att-2026-0012.md",
-            "captured_at": "2026-11-13T13:36:09Z"
-          },
-          "note": "Attribution text included in every answer as the card describes."
-        }
-      ]
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Aardvark Residential and Commercial Services, Grandview | Gr)."
     },
     {
-      "attestation_id": "att-2026-0013",
-      "published_at": "2026-11-13T13:45:00Z",
-      "specimen": false,
-      "source_registry": "a2aregistry.org",
-      "agent": {
-        "name": "ipvolt",
-        "url": "https://ipvolt.com",
-        "card_url": "https://ipvolt.com/.well-known/agent-card.json",
-        "registry_entry_url": "https://ipvolt.com/.well-known/agent-card.json",
-        "last_seen": "2026-11-13"
-      },
-      "summary": {
-        "claims_total": 7,
-        "claims_pass": 3,
-        "claims_fail": 0,
-        "claims_unverified": 4,
-        "score": 43
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "The catalog skill returns the mobile proxy offers rentable right now, from the live checkout: country, carrier, period, stock, price in US cents, offer id and version",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "live probe of the /a2a catalog skill",
-            "url": "evidence/att-2026-0013.md",
-            "captured_at": "2026-11-13T13:36:10Z"
-          },
-          "note": "Probe returned a structured catalog (currency USD, asOf 2026-11-13T13:36:10Z, purchasesOpen true) with per-offer stock and price; task completed in 1021 ms."
-        },
-        {
-          "id": "c2",
-          "claim": "Prices are expressed in US cents as the card states",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "probe response",
-            "url": "evidence/att-2026-0013.md",
-            "captured_at": "2026-11-13T13:36:10Z"
-          },
-          "note": "priceMinor fields consistent with US cents (e.g. 900 = $9.00), currency USD."
-        },
-        {
-          "id": "c3",
-          "claim": "Availability changes and should be read again at rent time (versioned offers)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "probe response",
-            "url": "evidence/att-2026-0013.md",
-            "captured_at": "2026-11-13T13:36:10Z"
-          },
-          "note": "Every offer carries a version id and the card itself tells agents to re-read; the structure supports the claim."
-        },
-        {
-          "id": "c4",
-          "claim": "The access skill registers an agent for a customer account with email plus a 6-digit code and view-only or capped scopes",
-          "check_type": "automated",
-          "result": "unverified",
-          "evidence": {
-            "type": "needs a customer account; not exercised",
-            "url": "evidence/att-2026-0013.md",
-            "captured_at": "2026-11-13T13:45:00Z"
-          },
-          "note": "Account-gated. No signup was performed for this check."
-        },
-        {
-          "id": "c5",
-          "claim": "balance, grant and orders skills return the customer's prepaid balance, granted scopes and latest 100 orders",
-          "check_type": "automated",
-          "result": "unverified",
-          "evidence": {
-            "type": "needs an agent access token",
-            "url": "evidence/att-2026-0013.md",
-            "captured_at": "2026-11-13T13:45:00Z"
-          },
-          "note": "Account-gated."
-        },
-        {
-          "id": "c6",
-          "claim": "purchase rents proxies from the customer's prepaid balance, counted against the spending cap the customer set",
-          "check_type": "automated",
-          "result": "unverified",
-          "evidence": {
-            "type": "spends real money; not exercised",
-            "url": "evidence/att-2026-0013.md",
-            "captured_at": "2026-11-13T13:45:00Z"
-          },
-          "note": "Deliberately not exercised: the check must not spend a customer's balance."
-        },
-        {
-          "id": "c7",
-          "claim": "renewal-quote returns a sealed price quote valid for 2 minutes and renew executes it within the spending cap",
-          "check_type": "automated",
-          "result": "unverified",
-          "evidence": {
-            "type": "needs an agent access token",
-            "url": "evidence/att-2026-0013.md",
-            "captured_at": "2026-11-13T13:45:00Z"
-          },
-          "note": "Account-gated."
-        }
-      ]
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 95 listings and its categories; the probe matched by the asked words."
     },
     {
-      "attestation_id": "att-2026-0010",
-      "published_at": "2026-11-13T13:35:00Z",
-      "specimen": false,
-      "source_registry": "Own agent card",
-      "agent": {
-        "name": "12 Play Testers",
-        "url": "https://play.kubeai.info",
-        "card_url": "https://play.kubeai.info/.well-known/agent-card.json",
-        "registry_entry_url": "https://play.kubeai.info/.well-known/agent-card.json",
-        "last_seen": "2026-11-13"
-      },
-      "summary": {
-        "claims_total": 6,
-        "claims_pass": 6,
-        "claims_fail": 0,
-        "claims_unverified": 0,
-        "score": 100
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "EUR 200 flat per engagement is published on the site (12 testers, 14 days, no add-ons)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "site availability.json and page, live read",
-            "url": "evidence/att-2026-0010.md",
-            "captured_at": "2026-11-13T12:25:00Z"
-          },
-          "note": "pricing_model fixed, public_price 200 EUR, subscriptions false."
-        },
-        {
-          "id": "c2",
-          "claim": "Operated by KubeAI, with Yacine Zairi named as the accountable human",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "agent card, live read",
-            "url": "evidence/att-2026-0010.md",
-            "captured_at": "2026-11-13T12:25:00Z"
-          },
-          "note": "Card served from play.kubeai.info."
-        },
-        {
-          "id": "c3",
-          "claim": "Every order starts as pending authorisation; no order completes without a human authorising it",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "order API contract + E2E A2A test 2026-11-12",
-            "url": "evidence/att-2026-0010.md",
-            "captured_at": "2026-11-13T12:25:00Z"
-          },
-          "note": "Kept unchanged by design through the pricing pass."
-        },
-        {
-          "id": "c4",
-          "claim": "Both intake channels are live: the /a2a request_quote endpoint and quotes@kubeai.info",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "live probes",
-            "url": "evidence/att-2026-0010.md",
-            "captured_at": "2026-11-13T12:31:00Z"
-          },
-          "note": "/a2a probe answered with the quote-intake questions (task task-6ead570d)."
-        },
-        {
-          "id": "c5",
-          "claim": "12 human testers on real devices use the app daily for 14 consecutive days",
-          "check_type": "behavior",
-          "result": "pass",
-          "evidence": {
-            "type": "human test record",
-            "url": "evidence/att-2026-0010.md",
-            "captured_at": "2026-11-13T12:35:00Z"
-          },
-          "note": "October 2026 cohort: 12 testers, daily dated screenshots, 14-day window completed 2026-11-01, engagement paid. Second cohort in progress (day 8 of 15 on 2026-11-13)."
-        },
-        {
-          "id": "c6",
-          "claim": "A real person aims to reply within 4h",
-          "check_type": "behavior",
-          "result": "pass",
-          "evidence": {
-            "type": "response logs",
-            "url": "evidence/att-2026-0010.md",
-            "captured_at": "2026-11-13T12:35:00Z"
-          },
-          "note": "Published as a target, not a guarantee; observed replies same day within hours. 24/7 automated ack (15-min sweep) added 2026-11-13; human quote reply promises same-day."
-        }
-      ]
-    },
-    {
-      "attestation_id": "att-2026-0009",
-      "published_at": "2026-11-12T09:00:00Z",
-      "specimen": true,
-      "source_registry": "Own agent card",
-      "agent": {
-        "name": "kubeai-agent-assurance",
-        "url": "https://assurance.kubeai.info",
-        "card_url": "https://assurance.kubeai.info/.well-known/agent-card.json",
-        "registry_entry_url": "https://assurance.kubeai.info/.well-known/agent-card.json",
-        "last_seen": "2026-11-12"
-      },
-      "summary": {
-        "claims_total": 5,
-        "claims_pass": 5,
-        "claims_fail": 0,
-        "claims_unverified": 0,
-        "score": 100
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "Specimen claim 1 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0009.md",
-            "captured_at": "2026-11-12T09:00:00Z"
-          },
-          "note": "Specimen data: this row is invented to prove the pipeline and stays labelled until the self-certification check runs."
-        },
-        {
-          "id": "c2",
-          "claim": "Specimen claim 2 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0009.md",
-            "captured_at": "2026-11-12T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c3",
-          "claim": "Specimen claim 3 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "pass",
-          "evidence": {
-            "type": "test record HT-0001",
-            "url": "evidence/specimen/att-2026-0009.md",
-            "captured_at": "2026-11-12T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c4",
-          "claim": "Specimen claim 4 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "pass",
-          "evidence": {
-            "type": "test record HT-0001",
-            "url": "evidence/specimen/att-2026-0009.md",
-            "captured_at": "2026-11-12T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c5",
-          "claim": "Specimen claim 5 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "pass",
-          "evidence": {
-            "type": "test record HT-0001",
-            "url": "evidence/specimen/att-2026-0009.md",
-            "captured_at": "2026-11-12T09:00:00Z"
-          },
-          "note": "Specimen data."
-        }
-      ]
-    },
-    {
-      "attestation_id": "att-2026-0008",
-      "published_at": "2026-11-11T09:00:00Z",
-      "specimen": true,
-      "source_registry": "specimen-registry.example",
-      "agent": {
-        "name": "specimen-invoice-agent",
-        "url": "https://specimen-invoice-agent.example",
-        "card_url": "https://specimen-invoice-agent.example/.well-known/agent-card.json",
-        "registry_entry_url": "https://specimen-registry.example/agents/specimen-invoice-agent",
-        "last_seen": "2026-11-11"
-      },
-      "summary": {
-        "claims_total": 6,
-        "claims_pass": 6,
-        "claims_fail": 0,
-        "claims_unverified": 0,
-        "score": 100
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "Specimen claim 1 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0008.md",
-            "captured_at": "2026-11-11T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c2",
-          "claim": "Specimen claim 2 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0008.md",
-            "captured_at": "2026-11-11T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c3",
-          "claim": "Specimen claim 3 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0008.md",
-            "captured_at": "2026-11-11T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c4",
-          "claim": "Specimen claim 4 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0008.md",
-            "captured_at": "2026-11-11T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c5",
-          "claim": "Specimen claim 5 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0008.md",
-            "captured_at": "2026-11-11T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c6",
-          "claim": "Specimen claim 6 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0008.md",
-            "captured_at": "2026-11-11T09:00:00Z"
-          },
-          "note": "Specimen data."
-        }
-      ]
-    },
-    {
-      "attestation_id": "att-2026-0007",
-      "published_at": "2026-11-09T09:00:00Z",
-      "specimen": true,
-      "source_registry": "specimen-registry.example",
-      "agent": {
-        "name": "specimen-travel-agent",
-        "url": "https://specimen-travel-agent.example",
-        "card_url": "https://specimen-travel-agent.example/.well-known/agent-card.json",
-        "registry_entry_url": "https://specimen-registry.example/agents/specimen-travel-agent",
-        "last_seen": "2026-11-09"
-      },
-      "summary": {
-        "claims_total": 4,
-        "claims_pass": 3,
-        "claims_fail": 1,
-        "claims_unverified": 0,
-        "score": 75
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "Supports streaming responses",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0007.md",
-            "captured_at": "2026-11-09T09:00:00Z"
-          },
-          "note": "Specimen data: invented row, labelled specimen until replaced by real checker output."
-        },
-        {
-          "id": "c2",
-          "claim": "Authenticates with OAuth 2.0",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0007.md",
-            "captured_at": "2026-11-09T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c3",
-          "claim": "Books multi-leg itineraries",
-          "check_type": "behavior",
-          "result": "pass",
-          "evidence": {
-            "type": "test record HT-0031",
-            "url": "evidence/specimen/att-2026-0007.md",
-            "captured_at": "2026-11-09T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c4",
-          "claim": "Responds in twelve languages",
-          "check_type": "behavior",
-          "result": "fail",
-          "evidence": {
-            "type": "test record HT-0031",
-            "url": "evidence/specimen/att-2026-0007.md",
-            "captured_at": "2026-11-09T09:00:00Z"
-          },
-          "note": "Specimen data."
-        }
-      ]
-    },
-    {
-      "attestation_id": "att-2026-0006",
-      "published_at": "2026-11-06T09:00:00Z",
-      "specimen": true,
-      "source_registry": "specimen-registry.example",
-      "agent": {
-        "name": "specimen-support-agent",
-        "url": "https://specimen-support-agent.example",
-        "card_url": "https://specimen-support-agent.example/.well-known/agent-card.json",
-        "registry_entry_url": "https://specimen-registry.example/agents/specimen-support-agent",
-        "last_seen": "2026-11-06"
-      },
-      "summary": {
-        "claims_total": 6,
-        "claims_pass": 0,
-        "claims_fail": 6,
-        "claims_unverified": 0,
-        "score": 0
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "Specimen claim 1 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "fail",
-          "evidence": {
-            "type": "test record HT-0027",
-            "url": "evidence/specimen/att-2026-0006.md",
-            "captured_at": "2026-11-06T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c2",
-          "claim": "Specimen claim 2 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "fail",
-          "evidence": {
-            "type": "test record HT-0027",
-            "url": "evidence/specimen/att-2026-0006.md",
-            "captured_at": "2026-11-06T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c3",
-          "claim": "Specimen claim 3 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "fail",
-          "evidence": {
-            "type": "test record HT-0027",
-            "url": "evidence/specimen/att-2026-0006.md",
-            "captured_at": "2026-11-06T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c4",
-          "claim": "Specimen claim 4 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "fail",
-          "evidence": {
-            "type": "test record HT-0027",
-            "url": "evidence/specimen/att-2026-0006.md",
-            "captured_at": "2026-11-06T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c5",
-          "claim": "Specimen claim 5 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "fail",
-          "evidence": {
-            "type": "test record HT-0027",
-            "url": "evidence/specimen/att-2026-0006.md",
-            "captured_at": "2026-11-06T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c6",
-          "claim": "Specimen claim 6 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "fail",
-          "evidence": {
-            "type": "test record HT-0027",
-            "url": "evidence/specimen/att-2026-0006.md",
-            "captured_at": "2026-11-06T09:00:00Z"
-          },
-          "note": "Specimen data."
-        }
-      ]
-    },
-    {
-      "attestation_id": "att-2026-0005",
-      "published_at": "2026-11-04T09:00:00Z",
-      "specimen": true,
-      "source_registry": "specimen-registry.example",
-      "agent": {
-        "name": "specimen-research-agent",
-        "url": "https://specimen-research-agent.example",
-        "card_url": "https://specimen-research-agent.example/.well-known/agent-card.json",
-        "registry_entry_url": "https://specimen-registry.example/agents/specimen-research-agent",
-        "last_seen": "2026-11-04"
-      },
-      "summary": {
-        "claims_total": 4,
-        "claims_pass": 4,
-        "claims_fail": 0,
-        "claims_unverified": 0,
-        "score": 100
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "Specimen claim 1 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0005.md",
-            "captured_at": "2026-11-04T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c2",
-          "claim": "Specimen claim 2 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0005.md",
-            "captured_at": "2026-11-04T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c3",
-          "claim": "Specimen claim 3 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0005.md",
-            "captured_at": "2026-11-04T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c4",
-          "claim": "Specimen claim 4 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0005.md",
-            "captured_at": "2026-11-04T09:00:00Z"
-          },
-          "note": "Specimen data."
-        }
-      ]
-    },
-    {
-      "attestation_id": "att-2026-0004",
-      "published_at": "2026-11-02T09:00:00Z",
-      "specimen": true,
-      "source_registry": "specimen-registry.example",
-      "agent": {
-        "name": "specimen-scheduling-agent",
-        "url": "https://specimen-scheduling-agent.example",
-        "card_url": "https://specimen-scheduling-agent.example/.well-known/agent-card.json",
-        "registry_entry_url": "https://specimen-registry.example/agents/specimen-scheduling-agent",
-        "last_seen": "2026-11-02"
-      },
-      "summary": {
-        "claims_total": 3,
-        "claims_pass": 2,
-        "claims_fail": 1,
-        "claims_unverified": 0,
-        "score": 67
-      },
-      "claims": [
-        {
-          "id": "c1",
-          "claim": "Specimen claim 1 (placeholder text, not a real check)",
-          "check_type": "automated",
-          "result": "pass",
-          "evidence": {
-            "type": "registry card",
-            "url": "evidence/specimen/att-2026-0004.md",
-            "captured_at": "2026-11-02T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c2",
-          "claim": "Specimen claim 2 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "pass",
-          "evidence": {
-            "type": "test record HT-0022",
-            "url": "evidence/specimen/att-2026-0004.md",
-            "captured_at": "2026-11-02T09:00:00Z"
-          },
-          "note": "Specimen data."
-        },
-        {
-          "id": "c3",
-          "claim": "Specimen claim 3 (placeholder text, not a real check)",
-          "check_type": "behavior",
-          "result": "fail",
-          "evidence": {
-            "type": "test record HT-0022",
-            "url": "evidence/specimen/att-2026-0004.md",
-            "captured_at": "2026-11-02T09:00:00Z"
-          },
-          "note": "Specimen data."
-        }
-      ]
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
     }
-  ]
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0015",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Backflow Testers",
+    "url": "https://backflowtesters.fyi",
+    "card_url": "https://backflowtesters.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://backflowtesters.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List backflow testers in the Backflow testing category': answered '261 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 1-800-Plumber &amp; Air/MEP Pros Inc., backflow tester in Be)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 281 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0016",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Extinguishers",
+    "url": "https://extinguishers.fyi",
+    "card_url": "https://extinguishers.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://extinguishers.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List fire extinguisher service companies in the Extinguisher inspection category': answered '128 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 1 Life Fire Safety, Corp. in Astoria | Extinguishers)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 175 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0017",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Heat Pump Pros",
+    "url": "https://heatpumppros.fyi",
+    "card_url": "https://heatpumppros.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://heatpumppros.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List heat pump installers in the Air-source heat pumps category': answered '142 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 1st Choice Plumbing Heating Cooling, heat pump installer in )."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 208 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0018",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Pest Treatment",
+    "url": "https://pesttreatment.fyi",
+    "card_url": "https://pesttreatment.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://pesttreatment.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List pest treatment providers in the Termite treatment category': answered '51 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Ace Walco Termite &amp; Pest Control INC in Linden | Pest Tr)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 225 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0019",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Arborists",
+    "url": "https://arborists.fyi",
+    "card_url": "https://arborists.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://arborists.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List tree care companies in the Tree removal category': answered '65 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. A Life With Trees LLC, tree care in Hood River | Arborists)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 338 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0020",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Abatement",
+    "url": "https://abatement.fyi",
+    "card_url": "https://abatement.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://abatement.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 1,
+    "claims_fail": 2,
+    "claims_unverified": 1,
+    "score": 25
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "fail",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List abatement contractors in the Asbestos testing category' (the card's own example): answered 'no matches' with and without a place, although the directory states 159 listings."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "unverified",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "No listing URLs were returned, so page spot-checks could not run."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "fail",
+     "evidence": {
+      "type": "live probes of find-listings and describe-directory",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "describe-directory answers with the taxonomy and 159 listings, but find-listings returned zero on the example query."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0021",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Boarding Schools",
+    "url": "https://boardingschools.fyi",
+    "card_url": "https://boardingschools.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://boardingschools.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List boarding schools in the Co-educational boarding schools category': answered '129 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Abbey College Cambridge, boarding school in Cambridge | Boar)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 175 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0022",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Well Drillers",
+    "url": "https://welldrillers.fyi",
+    "card_url": "https://welldrillers.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://welldrillers.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List well contractors in the Well drilling category': answered '157 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 1479209 Ontario LTD O/A Wilf Hall &amp; Sons Well Drilling, )."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 168 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0023",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Electrician Pros",
+    "url": "https://electricianpros.fyi",
+    "card_url": "https://electricianpros.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://electricianpros.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 1,
+    "claims_fail": 2,
+    "claims_unverified": 1,
+    "score": 25
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "fail",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List electricians in the Electrical repair category' (the card's own example): answered 'no matches' with and without a place, although the directory states 733 listings."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "unverified",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "No listing URLs were returned, so page spot-checks could not run."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "fail",
+     "evidence": {
+      "type": "live probes of find-listings and describe-directory",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "describe-directory answers with the taxonomy and 733 listings, but find-listings returned zero on the example query."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0024",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Exterminator",
+    "url": "https://exterminator.fyi",
+    "card_url": "https://exterminator.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://exterminator.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List pest control companies in the General pest control category': answered '144 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 911 ExterminAction, Inc., pest control company in Saint-Colo)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 178 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0025",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Boiler Pros",
+    "url": "https://boilerpros.fyi",
+    "card_url": "https://boilerpros.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://boilerpros.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List heating contractors in the Registered heating / mechanical contractors category': answered '300 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "1 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Aaa Plumbing By Newstrom INC, heating contractor in South St)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 375 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0026",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Alarm Installers",
+    "url": "https://alarminstallers.fyi",
+    "card_url": "https://alarminstallers.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://alarminstallers.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List alarm companies in the Alarm installation category': answered '57 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 24/7 Onsite Cameras, Inc., Columbia | Alarm Installers)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 151 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0027",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Fire Sprinklers",
+    "url": "https://firesprinklers.fyi",
+    "card_url": "https://firesprinklers.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://firesprinklers.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List sprinkler contractors in the Sprinkler installation category': answered '157 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 1St Texas Fire Protection INC, sprinkler contractor in Houst)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 157 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0028",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Septics",
+    "url": "https://septics.fyi",
+    "card_url": "https://septics.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://septics.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List septic service companies in the Septic pumping category': answered '61 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Adams Bros Construction, septic service company in Parry Sou)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 269 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0029",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Liquid Cooling",
+    "url": "https://liquidcooling.fyi",
+    "card_url": "https://liquidcooling.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://liquidcooling.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List vendors in the Direct-to-chip cold plates category': answered '29 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 2CRSi, vendor in Strasbourg | Liquid Cooling)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 154 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0030",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "GoldenVisas.fyi",
+    "url": "https://goldenvisas.fyi",
+    "card_url": "https://goldenvisas.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://goldenvisas.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List investment migration agents in the Citizenship by investment agents category': answered '108 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 360 HORIZON DMCC, investment migration agent in Dubai | Gold)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 185 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0031",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Quantum Companies",
+    "url": "https://quantumcompanies.fyi",
+    "card_url": "https://quantumcompanies.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://quantumcompanies.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List quantum companies in the Quantum hardware category': answered '40 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Alpine Quantum Technologies, quantum company in Innsbruck | )."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 162 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0032",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Surrogacy Agencies",
+    "url": "https://surrogacyagencies.fyi",
+    "card_url": "https://surrogacyagencies.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://surrogacyagencies.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List surrogacy agencies in the Gestational surrogacy agencies category': answered '125 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Abundant Beginnings Company, surrogacy agency in Agoura Hill)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 158 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0033",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "WineCellarBuilders",
+    "url": "https://winecellarbuilders.fyi",
+    "card_url": "https://winecellarbuilders.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://winecellarbuilders.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List wine cellar specialists in the Wine cellar builders category': answered '101 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. A&amp;W Moore Wine Racks UK, wine cellar specialist in Ilkes)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 150 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0034",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "VoiceAgents",
+    "url": "https://voiceagents.fyi",
+    "card_url": "https://voiceagents.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://voiceagents.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List voice AI vendors in the Voice agent platforms category': answered '40 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Assistable: pricing, languages and compliance | VoiceAgents)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 198 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0035",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "TMSClinics",
+    "url": "https://tmsclinics.fyi",
+    "card_url": "https://tmsclinics.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://tmsclinics.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List TMS clinics in the TMS clinics category': answered '104 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Acacia Clinics, TMS clinic in Sunnyvale | TMSClinics)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 192 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0036",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "SleepStudies",
+    "url": "https://sleepstudies.fyi",
+    "card_url": "https://sleepstudies.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://sleepstudies.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List sleep clinics in the Sleep studies category': answered '1315 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 1 Stop Cpap Shop, sleep clinic in Prescott Valley | SleepStu)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 1315 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0037",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Public Adjusters Directory",
+    "url": "https://publicadjusters.fyi",
+    "card_url": "https://publicadjusters.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://publicadjusters.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List public adjusters in the Public adjusters category': answered '1702 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Aala McCoy, public adjuster in Austin | Public Adjusters Dir)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 1702 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0038",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "PrivateWellnessRooms",
+    "url": "https://privatewellnessrooms.fyi",
+    "card_url": "https://privatewellnessrooms.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://privatewellnessrooms.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List wellness room builders in the Private wellness rooms category': answered '157 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Almost Heaven Saunas, wellness room builder in Holland | Pri)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 157 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0039",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "PrivateElevators",
+    "url": "https://privateelevators.fyi",
+    "card_url": "https://privateelevators.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://privateelevators.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List home lift companies in the Home elevators category': answered '109 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 101 Mobility Of Louisville, home lift company in Jeffersonto)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 213 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0040",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "PrivateDock",
+    "url": "https://privatedock.fyi",
+    "card_url": "https://privatedock.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://privatedock.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List marine contractors in the Dock builders category': answered '129 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Agm Marine Contractors Inc, marine contractor in Mashpee | P)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 194 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0041",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Opioid Treatment Directory",
+    "url": "https://opioidtreatment.fyi",
+    "card_url": "https://opioidtreatment.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://opioidtreatment.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List opioid treatment providers in the Opioid treatment providers category': answered '250 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. A.R.E.B.A Casriel Institute, opioid treatment provider in Br)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 250 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0042",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "MRIPrices",
+    "url": "https://mriprices.fyi",
+    "card_url": "https://mriprices.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://mriprices.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List hospitals in the Head (brain) MRI category': answered '5419 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 60th Medical Group (travis Afb), Travis Afb | MRIPrices)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 5419 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0043",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "MCPDirectory",
+    "url": "https://mcpdirectory.fyi",
+    "card_url": "https://mcpdirectory.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://mcpdirectory.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List MCP servers in the Developer tools category': answered '535 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. .NET MCP Server MCP server | MCPDirectory)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 1617 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0044",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "LuxuryGarageBuilders",
+    "url": "https://luxurygaragebuilders.fyi",
+    "card_url": "https://luxurygaragebuilders.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://luxurygaragebuilders.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List garage specialists in the Collector garage builders category': answered '1 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "1 of 1 returned URLs returned HTTP 200 with the page title matching the trade (e.g. TSL Custom Garages, garage specialist in Burlington | Luxury)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 291 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0045",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "GPUClouds",
+    "url": "https://gpuclouds.fyi",
+    "card_url": "https://gpuclouds.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://gpuclouds.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List GPU cloud providers in the Hyperscalers category': answered '14 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. AWS (Amazon EC2): GPUs, billing and regions | GPUClouds)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 169 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0046",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "AIGovernanceTools",
+    "url": "https://aigovernancetools.fyi",
+    "card_url": "https://aigovernancetools.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://aigovernancetools.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List AI governance tools in the AI governance platforms category': answered '66 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 2021.AI GRACE: AI governance tool | AIGovernanceTools)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 177 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0047",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "AIAgencies",
+    "url": "https://aiagencies.fyi",
+    "card_url": "https://aiagencies.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://aiagencies.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List AI agencies in the AI consulting category': answered '151 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. 10pearls, AI agency in Vienna | AIAgencies)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 331 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0048",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Studiofinder",
+    "url": "https://studiofinder.ca",
+    "card_url": "https://studiofinder.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://studiofinder.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List studios in the Yoga studios category': answered '731 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. &amp;asanas, London | Studiofinder)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 1838 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0049",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "MemoryCareHomes",
+    "url": "https://memorycarehomes.fyi",
+    "card_url": "https://memorycarehomes.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://memorycarehomes.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List memory care homes in the Memory care homes category': answered '17670 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. ! Desired Harmony Adult Family Home LLC, memory care home in)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 17670 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0050",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "MarriageLicense.fyi",
+    "url": "https://marriagelicense.fyi",
+    "card_url": "https://marriagelicense.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://marriagelicense.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List marriage licence offices in the Civil registration offices category': answered '665 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Aberdare Registration Office, Aberdare | MarriageLicense.fyi)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 1428 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0051",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "ITINAgents",
+    "url": "https://itinagents.fyi",
+    "card_url": "https://itinagents.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://itinagents.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List ITIN acceptance agents in the IRS acceptance agents category': answered '9838 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. #1 Tax Service &amp; More, LLC, West Palm Beach | ITINAgents)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 9838 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0052",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "FuneralCompare",
+    "url": "https://funeralcompare.fyi",
+    "card_url": "https://funeralcompare.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://funeralcompare.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List funeral providers in the Funeral and cremation providers category': answered '112 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. A J Morriss &amp; Sons, funeral provider in London | Funeral)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 112 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0053",
+   "published_at": "2026-11-13T14:50:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "ESA Vendors",
+    "url": "https://esavendors.fyi",
+    "card_url": "https://esavendors.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://esavendors.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the listings matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Probe 'List education vendors in the Private schools category': answered '178 matches' with listing URLs (task completed)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named business",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "2 of 2 returned URLs returned HTTP 200 with the page title matching the trade (e.g. Abacus School Of Austin, education vendor in Austin | ESA Ve)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a describe-directory skill",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Directory states 221 listings and its categories; the probe matched by the asked words."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed in the answer",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response footer",
+      "url": "evidence/att-2026-0014-family.md",
+      "captured_at": "2026-11-13T14:50:00Z"
+     },
+     "note": "Every answer ends with the data-source line and licence/attribution statement (template footer present)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0011",
+   "published_at": "2026-11-13T13:45:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "HVAC Pros",
+    "url": "https://hvacpros.fyi",
+    "card_url": "https://hvacpros.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://hvacpros.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the HVAC contractors matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0011.md",
+      "captured_at": "2026-11-13T13:36:08Z"
+     },
+     "note": "Probe 'List HVAC contractors in the installation category': answered '431 HVAC contractors match' with 5 named listings and structured data (task completed in 747 ms)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named company",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0011.md",
+      "captured_at": "2026-11-13T13:40:00Z"
+     },
+     "note": "3 of 3 returned URLs returned HTTP 200 with page titles matching the company names (Superior Gas Installations & Service Ltd; Gandy Installations)."
+    },
+    {
+     "id": "c3",
+     "claim": "describe-directory states how many contractors it lists and which categories",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the describe-directory skill",
+      "url": "evidence/att-2026-0011.md",
+      "captured_at": "2026-11-13T13:41:00Z"
+     },
+     "note": "Probe answered: 755 contractors listed, 5 categories (HVAC maintenance, AC repair, Furnace repair, HVAC installation, Ductwork); 431 word-matches inside 755 total is consistent."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed: each record keeps the licence of its source, listed in meta.sources",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response metadata",
+      "url": "evidence/att-2026-0011.md",
+      "captured_at": "2026-11-13T13:36:08Z"
+     },
+     "note": "Response meta.sources names the data sources with licences and attribution text."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0012",
+   "published_at": "2026-11-13T13:45:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Plumber Pros",
+    "url": "https://plumberpros.fyi",
+    "card_url": "https://plumberpros.fyi/.well-known/agent-card.json",
+    "registry_entry_url": "https://plumberpros.fyi/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text question with the plumbers matching its words: the number of matches and up to 5 of them with their page URL",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a find-listings skill",
+      "url": "evidence/att-2026-0012.md",
+      "captured_at": "2026-11-13T13:36:09Z"
+     },
+     "note": "Probe 'List plumbers in the emergency repair category': answered '1 plumber match' with the listing and structured data (task completed in 728 ms)."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist and match the named company",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0012.md",
+      "captured_at": "2026-11-13T13:40:00Z"
+     },
+     "note": "1 of 1 returned URL returned HTTP 200 with the page title matching (A-1 Plumbng & Emergency Rooter, Walla Walla WA)."
+    },
+    {
+     "id": "c3",
+     "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe",
+      "url": "evidence/att-2026-0012.md",
+      "captured_at": "2026-11-13T13:36:09Z"
+     },
+     "note": "The phrase 'emergency repair' matched by words rather than the category taxonomy; the response discloses query.q used. Behaviour matches the card's wording, not a synonym engine."
+    },
+    {
+     "id": "c4",
+     "claim": "Data provenance is disclosed: meta.sources carries licences (Overture Maps Places, CDLA-Permissive-2.0, release 2026-10-21.0) and an attribution requirement",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response metadata",
+      "url": "evidence/att-2026-0012.md",
+      "captured_at": "2026-11-13T13:36:09Z"
+     },
+     "note": "Attribution text included in every answer as the card describes."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0013",
+   "published_at": "2026-11-13T13:45:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "ipvolt",
+    "url": "https://ipvolt.com",
+    "card_url": "https://ipvolt.com/.well-known/agent-card.json",
+    "registry_entry_url": "https://ipvolt.com/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 7,
+    "claims_pass": 3,
+    "claims_fail": 0,
+    "claims_unverified": 4,
+    "score": 43
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "The catalog skill returns the mobile proxy offers rentable right now, from the live checkout: country, carrier, period, stock, price in US cents, offer id and version",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the /a2a catalog skill",
+      "url": "evidence/att-2026-0013.md",
+      "captured_at": "2026-11-13T13:36:10Z"
+     },
+     "note": "Probe returned a structured catalog (currency USD, asOf 2026-11-13T13:36:10Z, purchasesOpen true) with per-offer stock and price; task completed in 1021 ms."
+    },
+    {
+     "id": "c2",
+     "claim": "Prices are expressed in US cents as the card states",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response",
+      "url": "evidence/att-2026-0013.md",
+      "captured_at": "2026-11-13T13:36:10Z"
+     },
+     "note": "priceMinor fields consistent with US cents (e.g. 900 = $9.00), currency USD."
+    },
+    {
+     "id": "c3",
+     "claim": "Availability changes and should be read again at rent time (versioned offers)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response",
+      "url": "evidence/att-2026-0013.md",
+      "captured_at": "2026-11-13T13:36:10Z"
+     },
+     "note": "Every offer carries a version id and the card itself tells agents to re-read; the structure supports the claim."
+    },
+    {
+     "id": "c4",
+     "claim": "The access skill registers an agent for a customer account with email plus a 6-digit code and view-only or capped scopes",
+     "check_type": "automated",
+     "result": "unverified",
+     "evidence": {
+      "type": "needs a customer account; not exercised",
+      "url": "evidence/att-2026-0013.md",
+      "captured_at": "2026-11-13T13:45:00Z"
+     },
+     "note": "Account-gated. No signup was performed for this check."
+    },
+    {
+     "id": "c5",
+     "claim": "balance, grant and orders skills return the customer's prepaid balance, granted scopes and latest 100 orders",
+     "check_type": "automated",
+     "result": "unverified",
+     "evidence": {
+      "type": "needs an agent access token",
+      "url": "evidence/att-2026-0013.md",
+      "captured_at": "2026-11-13T13:45:00Z"
+     },
+     "note": "Account-gated."
+    },
+    {
+     "id": "c6",
+     "claim": "purchase rents proxies from the customer's prepaid balance, counted against the spending cap the customer set",
+     "check_type": "automated",
+     "result": "unverified",
+     "evidence": {
+      "type": "spends real money; not exercised",
+      "url": "evidence/att-2026-0013.md",
+      "captured_at": "2026-11-13T13:45:00Z"
+     },
+     "note": "Deliberately not exercised: the check must not spend a customer's balance."
+    },
+    {
+     "id": "c7",
+     "claim": "renewal-quote returns a sealed price quote valid for 2 minutes and renew executes it within the spending cap",
+     "check_type": "automated",
+     "result": "unverified",
+     "evidence": {
+      "type": "needs an agent access token",
+      "url": "evidence/att-2026-0013.md",
+      "captured_at": "2026-11-13T13:45:00Z"
+     },
+     "note": "Account-gated."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0010",
+   "published_at": "2026-11-13T13:35:00Z",
+   "specimen": false,
+   "source_registry": "Own agent card",
+   "agent": {
+    "name": "12 Play Testers",
+    "url": "https://play.kubeai.info",
+    "card_url": "https://play.kubeai.info/.well-known/agent-card.json",
+    "registry_entry_url": "https://play.kubeai.info/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 6,
+    "claims_pass": 6,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "EUR 200 flat per engagement is published on the site (12 testers, 14 days, no add-ons)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "site availability.json and page, live read",
+      "url": "evidence/att-2026-0010.md",
+      "captured_at": "2026-11-13T12:25:00Z"
+     },
+     "note": "pricing_model fixed, public_price 200 EUR, subscriptions false."
+    },
+    {
+     "id": "c2",
+     "claim": "Operated by KubeAI, with Yacine Zairi named as the accountable human",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "agent card, live read",
+      "url": "evidence/att-2026-0010.md",
+      "captured_at": "2026-11-13T12:25:00Z"
+     },
+     "note": "Card served from play.kubeai.info."
+    },
+    {
+     "id": "c3",
+     "claim": "Every order starts as pending authorisation; no order completes without a human authorising it",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "order API contract + E2E A2A test 2026-11-12",
+      "url": "evidence/att-2026-0010.md",
+      "captured_at": "2026-11-13T12:25:00Z"
+     },
+     "note": "Kept unchanged by design through the pricing pass."
+    },
+    {
+     "id": "c4",
+     "claim": "Both intake channels are live: the /a2a request_quote endpoint and quotes@kubeai.info",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probes",
+      "url": "evidence/att-2026-0010.md",
+      "captured_at": "2026-11-13T12:31:00Z"
+     },
+     "note": "/a2a probe answered with the quote-intake questions (task task-6ead570d)."
+    },
+    {
+     "id": "c5",
+     "claim": "12 human testers on real devices use the app daily for 14 consecutive days",
+     "check_type": "behavior",
+     "result": "pass",
+     "evidence": {
+      "type": "human test record",
+      "url": "evidence/att-2026-0010.md",
+      "captured_at": "2026-11-13T12:35:00Z"
+     },
+     "note": "October 2026 cohort: 12 testers, daily dated screenshots, 14-day window completed 2026-11-01, engagement paid. Second cohort in progress (day 8 of 15 on 2026-11-13)."
+    },
+    {
+     "id": "c6",
+     "claim": "A real person aims to reply within 4h",
+     "check_type": "behavior",
+     "result": "pass",
+     "evidence": {
+      "type": "response logs",
+      "url": "evidence/att-2026-0010.md",
+      "captured_at": "2026-11-13T12:35:00Z"
+     },
+     "note": "Published as a target, not a guarantee; observed replies same day within hours. 24/7 automated ack (15-min sweep) added 2026-11-13; human quote reply promises same-day."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0009",
+   "published_at": "2026-11-12T09:00:00Z",
+   "specimen": true,
+   "source_registry": "Own agent card",
+   "agent": {
+    "name": "kubeai-agent-assurance",
+    "url": "https://assurance.kubeai.info",
+    "card_url": "https://assurance.kubeai.info/.well-known/agent-card.json",
+    "registry_entry_url": "https://assurance.kubeai.info/.well-known/agent-card.json",
+    "last_seen": "2026-11-12"
+   },
+   "summary": {
+    "claims_total": 5,
+    "claims_pass": 5,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Specimen claim 1 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0009.md",
+      "captured_at": "2026-11-12T09:00:00Z"
+     },
+     "note": "Specimen data: this row is invented to prove the pipeline and stays labelled until the self-certification check runs."
+    },
+    {
+     "id": "c2",
+     "claim": "Specimen claim 2 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0009.md",
+      "captured_at": "2026-11-12T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c3",
+     "claim": "Specimen claim 3 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "pass",
+     "evidence": {
+      "type": "test record HT-0001",
+      "url": "evidence/specimen/att-2026-0009.md",
+      "captured_at": "2026-11-12T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c4",
+     "claim": "Specimen claim 4 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "pass",
+     "evidence": {
+      "type": "test record HT-0001",
+      "url": "evidence/specimen/att-2026-0009.md",
+      "captured_at": "2026-11-12T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c5",
+     "claim": "Specimen claim 5 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "pass",
+     "evidence": {
+      "type": "test record HT-0001",
+      "url": "evidence/specimen/att-2026-0009.md",
+      "captured_at": "2026-11-12T09:00:00Z"
+     },
+     "note": "Specimen data."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0008",
+   "published_at": "2026-11-11T09:00:00Z",
+   "specimen": true,
+   "source_registry": "specimen-registry.example",
+   "agent": {
+    "name": "specimen-invoice-agent",
+    "url": "https://specimen-invoice-agent.example",
+    "card_url": "https://specimen-invoice-agent.example/.well-known/agent-card.json",
+    "registry_entry_url": "https://specimen-registry.example/agents/specimen-invoice-agent",
+    "last_seen": "2026-11-11"
+   },
+   "summary": {
+    "claims_total": 6,
+    "claims_pass": 6,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Specimen claim 1 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0008.md",
+      "captured_at": "2026-11-11T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c2",
+     "claim": "Specimen claim 2 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0008.md",
+      "captured_at": "2026-11-11T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c3",
+     "claim": "Specimen claim 3 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0008.md",
+      "captured_at": "2026-11-11T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c4",
+     "claim": "Specimen claim 4 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0008.md",
+      "captured_at": "2026-11-11T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c5",
+     "claim": "Specimen claim 5 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0008.md",
+      "captured_at": "2026-11-11T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c6",
+     "claim": "Specimen claim 6 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0008.md",
+      "captured_at": "2026-11-11T09:00:00Z"
+     },
+     "note": "Specimen data."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0007",
+   "published_at": "2026-11-09T09:00:00Z",
+   "specimen": true,
+   "source_registry": "specimen-registry.example",
+   "agent": {
+    "name": "specimen-travel-agent",
+    "url": "https://specimen-travel-agent.example",
+    "card_url": "https://specimen-travel-agent.example/.well-known/agent-card.json",
+    "registry_entry_url": "https://specimen-registry.example/agents/specimen-travel-agent",
+    "last_seen": "2026-11-09"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 3,
+    "claims_fail": 1,
+    "claims_unverified": 0,
+    "score": 75
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Supports streaming responses",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0007.md",
+      "captured_at": "2026-11-09T09:00:00Z"
+     },
+     "note": "Specimen data: invented row, labelled specimen until replaced by real checker output."
+    },
+    {
+     "id": "c2",
+     "claim": "Authenticates with OAuth 2.0",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0007.md",
+      "captured_at": "2026-11-09T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c3",
+     "claim": "Books multi-leg itineraries",
+     "check_type": "behavior",
+     "result": "pass",
+     "evidence": {
+      "type": "test record HT-0031",
+      "url": "evidence/specimen/att-2026-0007.md",
+      "captured_at": "2026-11-09T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c4",
+     "claim": "Responds in twelve languages",
+     "check_type": "behavior",
+     "result": "fail",
+     "evidence": {
+      "type": "test record HT-0031",
+      "url": "evidence/specimen/att-2026-0007.md",
+      "captured_at": "2026-11-09T09:00:00Z"
+     },
+     "note": "Specimen data."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0006",
+   "published_at": "2026-11-06T09:00:00Z",
+   "specimen": true,
+   "source_registry": "specimen-registry.example",
+   "agent": {
+    "name": "specimen-support-agent",
+    "url": "https://specimen-support-agent.example",
+    "card_url": "https://specimen-support-agent.example/.well-known/agent-card.json",
+    "registry_entry_url": "https://specimen-registry.example/agents/specimen-support-agent",
+    "last_seen": "2026-11-06"
+   },
+   "summary": {
+    "claims_total": 6,
+    "claims_pass": 0,
+    "claims_fail": 6,
+    "claims_unverified": 0,
+    "score": 0
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Specimen claim 1 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "fail",
+     "evidence": {
+      "type": "test record HT-0027",
+      "url": "evidence/specimen/att-2026-0006.md",
+      "captured_at": "2026-11-06T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c2",
+     "claim": "Specimen claim 2 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "fail",
+     "evidence": {
+      "type": "test record HT-0027",
+      "url": "evidence/specimen/att-2026-0006.md",
+      "captured_at": "2026-11-06T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c3",
+     "claim": "Specimen claim 3 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "fail",
+     "evidence": {
+      "type": "test record HT-0027",
+      "url": "evidence/specimen/att-2026-0006.md",
+      "captured_at": "2026-11-06T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c4",
+     "claim": "Specimen claim 4 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "fail",
+     "evidence": {
+      "type": "test record HT-0027",
+      "url": "evidence/specimen/att-2026-0006.md",
+      "captured_at": "2026-11-06T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c5",
+     "claim": "Specimen claim 5 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "fail",
+     "evidence": {
+      "type": "test record HT-0027",
+      "url": "evidence/specimen/att-2026-0006.md",
+      "captured_at": "2026-11-06T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c6",
+     "claim": "Specimen claim 6 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "fail",
+     "evidence": {
+      "type": "test record HT-0027",
+      "url": "evidence/specimen/att-2026-0006.md",
+      "captured_at": "2026-11-06T09:00:00Z"
+     },
+     "note": "Specimen data."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0005",
+   "published_at": "2026-11-04T09:00:00Z",
+   "specimen": true,
+   "source_registry": "specimen-registry.example",
+   "agent": {
+    "name": "specimen-research-agent",
+    "url": "https://specimen-research-agent.example",
+    "card_url": "https://specimen-research-agent.example/.well-known/agent-card.json",
+    "registry_entry_url": "https://specimen-registry.example/agents/specimen-research-agent",
+    "last_seen": "2026-11-04"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Specimen claim 1 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0005.md",
+      "captured_at": "2026-11-04T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c2",
+     "claim": "Specimen claim 2 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0005.md",
+      "captured_at": "2026-11-04T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c3",
+     "claim": "Specimen claim 3 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0005.md",
+      "captured_at": "2026-11-04T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c4",
+     "claim": "Specimen claim 4 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0005.md",
+      "captured_at": "2026-11-04T09:00:00Z"
+     },
+     "note": "Specimen data."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0004",
+   "published_at": "2026-11-02T09:00:00Z",
+   "specimen": true,
+   "source_registry": "specimen-registry.example",
+   "agent": {
+    "name": "specimen-scheduling-agent",
+    "url": "https://specimen-scheduling-agent.example",
+    "card_url": "https://specimen-scheduling-agent.example/.well-known/agent-card.json",
+    "registry_entry_url": "https://specimen-registry.example/agents/specimen-scheduling-agent",
+    "last_seen": "2026-11-02"
+   },
+   "summary": {
+    "claims_total": 3,
+    "claims_pass": 2,
+    "claims_fail": 1,
+    "claims_unverified": 0,
+    "score": 67
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Specimen claim 1 (placeholder text, not a real check)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "registry card",
+      "url": "evidence/specimen/att-2026-0004.md",
+      "captured_at": "2026-11-02T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c2",
+     "claim": "Specimen claim 2 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "pass",
+     "evidence": {
+      "type": "test record HT-0022",
+      "url": "evidence/specimen/att-2026-0004.md",
+      "captured_at": "2026-11-02T09:00:00Z"
+     },
+     "note": "Specimen data."
+    },
+    {
+     "id": "c3",
+     "claim": "Specimen claim 3 (placeholder text, not a real check)",
+     "check_type": "behavior",
+     "result": "fail",
+     "evidence": {
+      "type": "test record HT-0022",
+      "url": "evidence/specimen/att-2026-0004.md",
+      "captured_at": "2026-11-02T09:00:00Z"
+     },
+     "note": "Specimen data."
+    }
+   ]
+  }
+ ]
 }
