@@ -1,7 +1,253 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T13:35:00Z",
+  "generated_at": "2026-11-13T13:45:00Z",
   "attestations": [
+    {
+      "attestation_id": "att-2026-0011",
+      "published_at": "2026-11-13T13:45:00Z",
+      "specimen": false,
+      "source_registry": "a2aregistry.org",
+      "agent": {
+        "name": "HVAC Pros",
+        "url": "https://hvacpros.fyi",
+        "card_url": "https://hvacpros.fyi/.well-known/agent-card.json",
+        "registry_entry_url": "https://hvacpros.fyi/.well-known/agent-card.json",
+        "last_seen": "2026-11-13"
+      },
+      "summary": {
+        "claims_total": 4,
+        "claims_pass": 4,
+        "claims_fail": 0,
+        "claims_unverified": 0,
+        "score": 100
+      },
+      "claims": [
+        {
+          "id": "c1",
+          "claim": "Answers a plain-text question with the HVAC contractors matching its words: the number of matches and up to 5 of them with their page URL",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "live probe of the /a2a find-listings skill",
+            "url": "evidence/att-2026-0011.md",
+            "captured_at": "2026-11-13T13:36:08Z"
+          },
+          "note": "Probe 'List HVAC contractors in the installation category': answered '431 HVAC contractors match' with 5 named listings and structured data (task completed in 747 ms)."
+        },
+        {
+          "id": "c2",
+          "claim": "The listing pages it returns exist and match the named company",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "HTTP spot-check of returned listing URLs",
+            "url": "evidence/att-2026-0011.md",
+            "captured_at": "2026-11-13T13:40:00Z"
+          },
+          "note": "3 of 3 returned URLs returned HTTP 200 with page titles matching the company names (Superior Gas Installations & Service Ltd; Gandy Installations)."
+        },
+        {
+          "id": "c3",
+          "claim": "describe-directory states how many contractors it lists and which categories",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "live probe of the describe-directory skill",
+            "url": "evidence/att-2026-0011.md",
+            "captured_at": "2026-11-13T13:41:00Z"
+          },
+          "note": "Probe answered: 755 contractors listed, 5 categories (HVAC maintenance, AC repair, Furnace repair, HVAC installation, Ductwork); 431 word-matches inside 755 total is consistent."
+        },
+        {
+          "id": "c4",
+          "claim": "Data provenance is disclosed: each record keeps the licence of its source, listed in meta.sources",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "probe response metadata",
+            "url": "evidence/att-2026-0011.md",
+            "captured_at": "2026-11-13T13:36:08Z"
+          },
+          "note": "Response meta.sources names the data sources with licences and attribution text."
+        }
+      ]
+    },
+    {
+      "attestation_id": "att-2026-0012",
+      "published_at": "2026-11-13T13:45:00Z",
+      "specimen": false,
+      "source_registry": "a2aregistry.org",
+      "agent": {
+        "name": "Plumber Pros",
+        "url": "https://plumberpros.fyi",
+        "card_url": "https://plumberpros.fyi/.well-known/agent-card.json",
+        "registry_entry_url": "https://plumberpros.fyi/.well-known/agent-card.json",
+        "last_seen": "2026-11-13"
+      },
+      "summary": {
+        "claims_total": 4,
+        "claims_pass": 4,
+        "claims_fail": 0,
+        "claims_unverified": 0,
+        "score": 100
+      },
+      "claims": [
+        {
+          "id": "c1",
+          "claim": "Answers a plain-text question with the plumbers matching its words: the number of matches and up to 5 of them with their page URL",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "live probe of the /a2a find-listings skill",
+            "url": "evidence/att-2026-0012.md",
+            "captured_at": "2026-11-13T13:36:09Z"
+          },
+          "note": "Probe 'List plumbers in the emergency repair category': answered '1 plumber match' with the listing and structured data (task completed in 728 ms)."
+        },
+        {
+          "id": "c2",
+          "claim": "The listing pages it returns exist and match the named company",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "HTTP spot-check of returned listing URLs",
+            "url": "evidence/att-2026-0012.md",
+            "captured_at": "2026-11-13T13:40:00Z"
+          },
+          "note": "1 of 1 returned URL returned HTTP 200 with the page title matching (A-1 Plumbng & Emergency Rooter, Walla Walla WA)."
+        },
+        {
+          "id": "c3",
+          "claim": "Word-based matching behaves as described: matches are found by place, category or words",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "live probe",
+            "url": "evidence/att-2026-0012.md",
+            "captured_at": "2026-11-13T13:36:09Z"
+          },
+          "note": "The phrase 'emergency repair' matched by words rather than the category taxonomy; the response discloses query.q used. Behaviour matches the card's wording, not a synonym engine."
+        },
+        {
+          "id": "c4",
+          "claim": "Data provenance is disclosed: meta.sources carries licences (Overture Maps Places, CDLA-Permissive-2.0, release 2026-10-21.0) and an attribution requirement",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "probe response metadata",
+            "url": "evidence/att-2026-0012.md",
+            "captured_at": "2026-11-13T13:36:09Z"
+          },
+          "note": "Attribution text included in every answer as the card describes."
+        }
+      ]
+    },
+    {
+      "attestation_id": "att-2026-0013",
+      "published_at": "2026-11-13T13:45:00Z",
+      "specimen": false,
+      "source_registry": "a2aregistry.org",
+      "agent": {
+        "name": "ipvolt",
+        "url": "https://ipvolt.com",
+        "card_url": "https://ipvolt.com/.well-known/agent-card.json",
+        "registry_entry_url": "https://ipvolt.com/.well-known/agent-card.json",
+        "last_seen": "2026-11-13"
+      },
+      "summary": {
+        "claims_total": 7,
+        "claims_pass": 3,
+        "claims_fail": 0,
+        "claims_unverified": 4,
+        "score": 43
+      },
+      "claims": [
+        {
+          "id": "c1",
+          "claim": "The catalog skill returns the mobile proxy offers rentable right now, from the live checkout: country, carrier, period, stock, price in US cents, offer id and version",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "live probe of the /a2a catalog skill",
+            "url": "evidence/att-2026-0013.md",
+            "captured_at": "2026-11-13T13:36:10Z"
+          },
+          "note": "Probe returned a structured catalog (currency USD, asOf 2026-11-13T13:36:10Z, purchasesOpen true) with per-offer stock and price; task completed in 1021 ms."
+        },
+        {
+          "id": "c2",
+          "claim": "Prices are expressed in US cents as the card states",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "probe response",
+            "url": "evidence/att-2026-0013.md",
+            "captured_at": "2026-11-13T13:36:10Z"
+          },
+          "note": "priceMinor fields consistent with US cents (e.g. 900 = $9.00), currency USD."
+        },
+        {
+          "id": "c3",
+          "claim": "Availability changes and should be read again at rent time (versioned offers)",
+          "check_type": "automated",
+          "result": "pass",
+          "evidence": {
+            "type": "probe response",
+            "url": "evidence/att-2026-0013.md",
+            "captured_at": "2026-11-13T13:36:10Z"
+          },
+          "note": "Every offer carries a version id and the card itself tells agents to re-read; the structure supports the claim."
+        },
+        {
+          "id": "c4",
+          "claim": "The access skill registers an agent for a customer account with email plus a 6-digit code and view-only or capped scopes",
+          "check_type": "automated",
+          "result": "unverified",
+          "evidence": {
+            "type": "needs a customer account; not exercised",
+            "url": "evidence/att-2026-0013.md",
+            "captured_at": "2026-11-13T13:45:00Z"
+          },
+          "note": "Account-gated. No signup was performed for this check."
+        },
+        {
+          "id": "c5",
+          "claim": "balance, grant and orders skills return the customer's prepaid balance, granted scopes and latest 100 orders",
+          "check_type": "automated",
+          "result": "unverified",
+          "evidence": {
+            "type": "needs an agent access token",
+            "url": "evidence/att-2026-0013.md",
+            "captured_at": "2026-11-13T13:45:00Z"
+          },
+          "note": "Account-gated."
+        },
+        {
+          "id": "c6",
+          "claim": "purchase rents proxies from the customer's prepaid balance, counted against the spending cap the customer set",
+          "check_type": "automated",
+          "result": "unverified",
+          "evidence": {
+            "type": "spends real money; not exercised",
+            "url": "evidence/att-2026-0013.md",
+            "captured_at": "2026-11-13T13:45:00Z"
+          },
+          "note": "Deliberately not exercised: the check must not spend a customer's balance."
+        },
+        {
+          "id": "c7",
+          "claim": "renewal-quote returns a sealed price quote valid for 2 minutes and renew executes it within the spending cap",
+          "check_type": "automated",
+          "result": "unverified",
+          "evidence": {
+            "type": "needs an agent access token",
+            "url": "evidence/att-2026-0013.md",
+            "captured_at": "2026-11-13T13:45:00Z"
+          },
+          "note": "Account-gated."
+        }
+      ]
+    },
     {
       "attestation_id": "att-2026-0010",
       "published_at": "2026-11-13T13:35:00Z",
