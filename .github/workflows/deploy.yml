@@ -33,9 +33,15 @@ jobs:
         run: |
           set -euo pipefail
           rm -rf dist
-          mkdir -p dist/data
+          mkdir -p dist
           cp -r site/. dist/
-          cp data/attestations.json dist/data/attestations.json
+          cp data/attestations.json dist/data-attestations.source.json
+          mkdir -p dist/data
+          mv dist/data-attestations.source.json dist/data/attestations.json
+
+      - name: Render ledger from attestations.json
+        if: ${{ inputs.rollback_run_id == '' }}
+        run: node scripts/build.mjs dist data/attestations.json
 
       - name: Upload build artifact (rollback source)
         if: ${{ inputs.rollback_run_id == '' }}
