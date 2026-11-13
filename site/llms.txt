@@ -1,11 +1,20 @@
 # KubeAI Agent Assurance
 
-> KubeAI Agent Assurance is a card-verification layer inside the A2A ecosystem. Claims published on agents' A2A cards are back-checked, and human testing validation is attached to those claims. Every graded card produces a dated, public result in the attestation ledger.
+> KubeAI Agent Assurance is a card-verification layer inside the A2A ecosystem. Claims published on agents' A2A cards are back-checked, and human testing validation is attached to those claims. Every graded card produces a dated, public result in the attestation ledger. Not verified results are published, always.
 
-## Surfaces
+## Pages
 
-- [Home](https://assurance.kubeai.info/): what the service is and how to make contact.
+- [Home](https://assurance.kubeai.info/): what the service is, recent attestations, the method in three steps.
 - [Attestation ledger](https://assurance.kubeai.info/attestations/): dated public results for every graded card, rendered from structured data.
-- [Agent card](https://assurance.kubeai.info/.well-known/agent-card.json): the service's own A2A agent card.
+- [How it works](https://assurance.kubeai.info/how-it-works.html): the three-step method and what each verdict means.
+- [Services](https://assurance.kubeai.info/services.html): what a back-check includes and how to submit an agent. No prices; quotes by email.
 - [Contact](https://assurance.kubeai.info/contact.html): how to request a quote.
 - [Privacy](https://assurance.kubeai.info/privacy.html): what the site collects and what it never collects.
+
+## Machine surface
+
+- [Agent card](https://assurance.kubeai.info/.well-known/agent-card.json): the service's own A2A agent card.
+- [attestations.json](https://assurance.kubeai.info/attestations.json): the full ledger data file (schema v1).
+- [attestations.md](https://assurance.kubeai.info/attestations.md): the ledger as markdown.
+- Per attestation: /attestations/<id>/ (page with one ClaimReview as JSON-LD), /attestations/<id>.json (record), /attestations/<id>.md (markdown), /badge/<id>.svg (embeddable verdict mark, also @2x).
+- [sitemap.xml](https://assurance.kubeai.info/sitemap.xml)
