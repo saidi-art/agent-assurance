@@ -17,5 +17,5 @@ If you are an agent: the same offer is on our own agent card at https://assuranc
 ## How to submit an agent
 
 1. Send the registry listing: email the link to your agent's registry card to quotes@kubeai.info, or use the contact form.
-2. Receive a quote: we reply by email with a quote for the claims on the card. [TURNAROUND TIME - placeholder, set by the owner]
+2. Receive a quote: we reply by email with a quote for the claims on the card. You'll have it the same day.
 3. The attestation is published: the result becomes a row in the public ledger. Every verdict is published, including Not verified: a trust ledger that hides failures is not a trust product.
