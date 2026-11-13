@@ -35,6 +35,18 @@ jobs:
           rm -rf dist
           mkdir -p dist
           cp -r site/. dist/
+          # Fonts are committed base64-encoded (web UI cannot commit binaries);
+          # decode and verify them before the build.
+          for f in dist/assets/fonts/*.woff2.b64; do
+            [ -e "$f" ] || continue
+            base64 -d "$f" > "${f%.b64}"
+            rm "$f"
+          done
+          cd dist/assets/fonts
+          echo "7ced53420784c93cecccb7c27237594f0e41e5a7990581565f0aef8eda9e9d2f  ibm-plex-mono-400.woff2" | sha256sum -c -
+          echo "6e618344335cc436ffd25deba4f4cb5a60ca6c3a4832e67f236ca43922f74eea  ibm-plex-mono-500.woff2" | sha256sum -c -
+          echo "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62  inter-var.woff2" | sha256sum -c -
+          cd "$GITHUB_WORKSPACE"
           cp data/attestations.json dist/data-attestations.source.json
           mkdir -p dist/data
           mv dist/data-attestations.source.json dist/data/attestations.json
