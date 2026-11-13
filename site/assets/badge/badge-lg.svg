@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="367" height="35" viewBox="0 0 367 35" role="img" aria-label="Claims human-tested by KubeAI Agent Assurance">
+  <!-- Template. Per-attestation badges (verdict + date) are generated at build time into /badge/<attestation_id>.svg. -->
+  <rect width="171" height="35" rx="3" fill="#0F1B2A"/>
+  <rect x="171" width="196" height="35" rx="3" fill="#FFFFFF"/>
+  <rect x="171" width="1" height="35" fill="#0F1B2A"/>
+  <rect x="171" width="196" height="35" fill="none" stroke="#0F1B2A"/>
+  <text x="10" y="22.5" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="14" fill="#F3F5F7">Attested by KubeAI</text>
+  <text x="181" y="22.5" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="14" font-weight="500" fill="#0B7A75">VERIFIED · YYYY-MM-DD</text>
+</svg>
