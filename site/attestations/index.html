@@ -1,31 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Attestations - KubeAI Agent Assurance</title>
-  <meta name="description" content="Public attestation ledger: dated results for every graded A2A agent card.">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <!-- Analytics placeholder: Plausible (cookieless, aggregate only), per spec section 5.
-       Uncomment once the Plausible site for assurance.kubeai.info is created by the owner.
-  <script defer data-domain="assurance.kubeai.info" src="https://plausible.io/js/script.js"></script>
-  -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attestations - KubeAI Agent Assurance</title>
+<meta name="description" content="Every graded agent-card result, dated and traceable. Each row links to the registry card or the human test record behind its verdict.">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/nav.js" defer></script>
+<script src="/assets/js/ledger.js" defer></script>
+<!-- Analytics placeholder: Plausible (cookieless, aggregate only), per spec section 5.
+     Uncomment once the Plausible site for assurance.kubeai.info is created by the owner.
+<script defer data-domain="assurance.kubeai.info" src="https://plausible.io/js/script.js"></script>
+-->
+<!--BUILD:LEDGER_JSONLD-->
 </head>
 <body>
-  <header>
-    <nav aria-label="Main">
-      <a href="/">KubeAI Agent Assurance</a>
-      <a href="/attestations/">Attestations</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">KubeAI Agent Assurance</a>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h14M3 10h14M3 14h14"></path></svg>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <a href="/attestations/" aria-current="page">Attestations</a>
+      <a href="/how-it-works.html">How it works</a>
+      <a href="/services.html">Services</a>
       <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
     </nav>
-  </header>
-  <main>
-    <h1>Attestation ledger</h1>
-    <p class="muted">No attestations published yet. Entries are rendered from <code>data/attestations.json</code> when the first graded results ship.</p>
-  </main>
-  <footer>
-    <p>KubeAI - <a href="https://kubeai.info?utm_source=assurance&amp;utm_medium=website&amp;utm_campaign=attestations">kubeai.info</a></p>
-  </footer>
+  </div>
+</header>
+
+<main class="page-main">
+
+<div class="ledger-head">
+  <div class="titles">
+    <h1 class="h-page">Attestations</h1>
+    <p class="body-copy" style="max-width: 560px;">Every graded agent-card result, dated and traceable. Each row links to the registry card or the human test record behind its verdict.</p>
+  </div>
+  <div class="twins">
+    <a href="/attestations.json">attestations.json</a>
+    <a href="/attestations.md">attestations.md</a>
+  </div>
+</div>
+
+<div class="filters">
+  <div class="search">
+    <label for="q">Agent or registry</label>
+    <input id="q" type="search" placeholder="Filter by name">
+  </div>
+  <div class="chips" role="group" aria-label="Verdict">
+    <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" class="chip" data-filter="verified" aria-pressed="false">Verified</button>
+    <button type="button" class="chip" data-filter="partially" aria-pressed="false">Partially verified</button>
+    <button type="button" class="chip" data-filter="not-verified" aria-pressed="false">Not verified</button>
+  </div>
+</div>
+
+<div class="ledger" role="table" aria-label="Attestation ledger">
+  <div role="row" class="lrow lhead">
+    <span role="columnheader">DATE</span><span role="columnheader">AGENT &middot; REGISTRY SOURCE</span><span role="columnheader">CLAIMS</span><span role="columnheader">METHOD</span><span role="columnheader">VERDICT</span><span role="columnheader">PERMALINK</span>
+  </div>
+<!--BUILD:LEDGER_ROWS-->
+</div>
+
+<p class="fine">Rows marked specimen are invented data shown for layout. Verdicts are always text plus mark, never colour alone. Not verified results are published, always: a trust ledger that hides failures is not a trust product.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>No cookies. No trackers. No accounts.</span>
+    <span class="links">
+      <a href="mailto:quotes@kubeai.info">quotes@kubeai.info</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/attestations.md">This page as markdown</a>
+    </span>
+  </div>
+</footer>
+
 </body>
-</html>
+    </html>
