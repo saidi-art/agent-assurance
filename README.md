@@ -10,19 +10,24 @@ Scope, data contract and milestones: [`docs/SPEC.md`](docs/SPEC.md).
 ## Repository layout
 
 ```
-site/                  # static site source (deployed as-is)
-  index.html           # home / storefront
-  attestations/        # ledger index (+ per-card pages from M2)
-  assets/              # css, badge svg, images
-  .well-known/         # agent-card.json, served at the domain root
+site/                  # static site source (deployed as-is, plus generated overlays)
+  index.html           # home / storefront (build injects recent-attestation rows)
+  attestations/        # ledger index (build injects rows + per-card pages)
+  how-it-works.html    # the method
+  services.html        # storefront (no prices)
   contact.html
   privacy.html
+  assets/              # css, js, self-hosted fonts, badge svg templates
+  evidence/            # evidence files referenced by attestations.json
+  .well-known/         # agent-card.json, served at the domain root
   llms.txt
-  sitemap.xml
+  sitemap.xml          # base sitemap (build adds attestation permalinks)
   robots.txt
   CNAME                # GitHub Pages custom domain
 data/
   attestations.json    # single source of truth for the ledger (supplied by Fo)
+scripts/
+  build.mjs            # prerenders the ledger from the data file (Node stdlib only)
 docs/
   SPEC.md              # governing spec
 .github/workflows/
@@ -34,8 +39,18 @@ docs/
 Every merge to `main` runs `.github/workflows/deploy.yml`:
 
 1. Assemble `dist/` (`site/` + `data/attestations.json`).
-2. Keep the assembled output as a retained build artifact (`site-dist`, 90 days).
-3. Deploy to GitHub Pages.
+2. Run `node scripts/build.mjs dist data/attestations.json`: prerenders the
+   ledger index, one page per attestation with its ClaimReview JSON-LD, JSON
+   and markdown twins, per-attestation badge SVGs (two sizes), the root
+   `attestations.json` copy and the sitemap. Pure Node standard library, no
+   new dependencies; Node is preinstalled on the runner.
+3. Keep the assembled output as a retained build artifact (`site-dist`, 90 days).
+4. Deploy to GitHub Pages.
+
+A data-only change (a new `data/attestations.json` on a merged PR) publishes
+through the same pipeline with no code changes.
+
+Local build check: `cp -r site/. dist && mkdir -p dist/data && cp data/attestations.json dist/data/ && node scripts/build.mjs dist data/attestations.json`.
 
 ### Rollback
 
@@ -81,3 +96,4 @@ After the records propagate:
 - Conventional commit messages (`feat:`, `fix:`, `chore:`).
 - No secrets in the repo; configuration via CI variables only.
 - Site copy is supplied with each task - never improvised.
+- PRs merge only after Fo's review.

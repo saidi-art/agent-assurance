@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works - KubeAI Agent Assurance</title>
+<meta name="description" content="Everything we publish starts from the claims on an agent's registry card and ends in evidence you can open. Three steps, in this order.">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/nav.js" defer></script>
+<!-- Analytics placeholder: Plausible (cookieless, aggregate only), per spec section 5.
+     Uncomment once the Plausible site for assurance.kubeai.info is created by the owner.
+<script defer data-domain="assurance.kubeai.info" src="https://plausible.io/js/script.js"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">KubeAI Agent Assurance</a>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h14M3 10h14M3 14h14"></path></svg>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <a href="/attestations/">Attestations</a>
+      <a href="/how-it-works.html" aria-current="page">How it works</a>
+      <a href="/services.html">Services</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-main wide-gap">
+
+<div style="display: flex; flex-direction: column; gap: 12px;">
+  <div class="kicker">METHOD</div>
+  <h1 class="h-page" style="max-width: 720px;">A verdict is only as good as the trail behind it.</h1>
+  <p class="lede">Everything we publish starts from the claims on an agent's registry card and ends in evidence you can open. Three steps, in this order.</p>
+</div>
+
+<section class="steps" aria-label="The three steps">
+  <div class="step">
+    <span class="num">01</span>
+    <div class="what">
+      <h2>Registry card intake</h2>
+      <p>We take the agent's card exactly as a public registry lists it. The claims on that card set the scope: we check what the card says, and nothing it does not say.</p>
+    </div>
+    <div class="evidence">
+      <span class="lbl">EVIDENCE IT LEAVES</span>
+      <span class="val">Link to the registry card</span>
+    </div>
+  </div>
+  <div class="step">
+    <span class="num">02</span>
+    <div class="what">
+      <h2>Claims back-check</h2>
+      <p>Each claim is compared with what the agent actually serves. Claims a machine can settle are graded here, one by one.</p>
+    </div>
+    <div class="evidence">
+      <span class="lbl">EVIDENCE IT LEAVES</span>
+      <span class="val">Per-claim result, method "automated back-check"</span>
+    </div>
+  </div>
+  <div class="step">
+    <span class="num">03</span>
+    <div class="what">
+      <h2>Human testing validation</h2>
+      <p>Human testers exercise the claims a machine cannot settle, and record what happened. That record is what the verdict points to.</p>
+    </div>
+    <div class="evidence">
+      <span class="lbl">EVIDENCE IT LEAVES</span>
+      <span class="val">Human test record, linked from the row</span>
+    </div>
+  </div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 20px;">
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <h2 class="h-section">What each verdict means</h2>
+    <p class="body-copy" style="max-width: 640px;">Each claim is graded on its own. The row's verdict summarises them, and the same value is published in the page's structured data.</p>
+  </div>
+  <div class="verdict-table">
+    <div class="vrow">
+      <span class="verdict v-ok"><span class="dot" aria-hidden="true"></span>VERIFIED</span>
+      <span class="rating">5 of 5</span>
+      <span class="meaning">Every claim checked was confirmed.</span>
+    </div>
+    <div class="vrow">
+      <span class="verdict v-warn"><span class="dot" aria-hidden="true"></span>PARTIALLY VERIFIED</span>
+      <span class="rating">3 of 5</span>
+      <span class="meaning">At least one claim was confirmed and at least one was not. The row shows which.</span>
+    </div>
+    <div class="vrow">
+      <span class="verdict v-bad"><span class="dot" aria-hidden="true"></span>NOT VERIFIED</span>
+      <span class="rating">1 of 5</span>
+      <span class="meaning">No claim checked was confirmed.</span>
+    </div>
+  </div>
+  <p class="fine">The number is the verdict's ratingValue on a scale from 1 (worst) to 5 (best), as carried in each attestation's ClaimReview.</p>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 20px;">
+  <h2 class="h-section">How to read a ledger row</h2>
+  <dl class="deflist">
+    <div class="arow"><dt>Date</dt><dd>The day the attestation was issued.</dd></div>
+    <div class="arow"><dt>Agent &middot; registry source</dt><dd>Whose card was checked, and the registry listing it was read from.</dd></div>
+    <div class="arow"><dt>Claims</dt><dd>How many of the card's claims were confirmed, out of how many were checked.</dd></div>
+    <div class="arow"><dt>Method</dt><dd>Automated back-check, human test, or both.</dd></div>
+    <div class="arow"><dt>Verdict</dt><dd>One of the three states above, always as text with its mark.</dd></div>
+    <div class="arow"><dt>Permalink</dt><dd>A stable address for this one attestation, so a person or an agent can cite it.</dd></div>
+  </dl>
+  <div class="btn-row">
+    <a class="btn" href="/attestations/">Read the attestations</a>
+    <a class="btn secondary" href="/services.html">Have your agent validated</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>No cookies. No trackers. No accounts.</span>
+    <span class="links">
+      <a href="mailto:quotes@kubeai.info">quotes@kubeai.info</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/how-it-works.md">This page as markdown</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

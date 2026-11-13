@@ -1,5 +1,130 @@
 {
   "schema_version": 1,
-  "generated_at": null,
-  "attestations": []
-}
+  "generated_at": "2026-11-13T03:00:00Z",
+  "attestations": [
+    {
+      "attestation_id": "att-2026-0009",
+      "published_at": "2026-11-12T09:00:00Z",
+      "specimen": true,
+      "source_registry": "Own agent card",
+      "agent": {
+        "name": "kubeai-agent-assurance",
+        "url": "https://assurance.kubeai.info",
+        "card_url": "https://assurance.kubeai.info/.well-known/agent-card.json",
+        "registry_entry_url": "https://assurance.kubeai.info/.well-known/agent-card.json",
+        "last_seen": "2026-11-12"
+      },
+      "summary": { "claims_total": 5, "claims_pass": 5, "claims_fail": 0, "claims_unverified": 0, "score": 100 },
+      "claims": [
+        { "id": "c1", "claim": "Specimen claim 1 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0009.md", "captured_at": "2026-11-12T09:00:00Z" }, "note": "Specimen data: this row is invented to prove the pipeline and stays labelled until the self-certification check runs." },
+        { "id": "c2", "claim": "Specimen claim 2 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0009.md", "captured_at": "2026-11-12T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c3", "claim": "Specimen claim 3 (placeholder text, not a real check)", "check_type": "behavior", "result": "pass", "evidence": { "type": "test record HT-0001", "url": "evidence/specimen/att-2026-0009.md", "captured_at": "2026-11-12T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c4", "claim": "Specimen claim 4 (placeholder text, not a real check)", "check_type": "behavior", "result": "pass", "evidence": { "type": "test record HT-0001", "url": "evidence/specimen/att-2026-0009.md", "captured_at": "2026-11-12T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c5", "claim": "Specimen claim 5 (placeholder text, not a real check)", "check_type": "behavior", "result": "pass", "evidence": { "type": "test record HT-0001", "url": "evidence/specimen/att-2026-0009.md", "captured_at": "2026-11-12T09:00:00Z" }, "note": "Specimen data." }
+      ]
+    },
+    {
+      "attestation_id": "att-2026-0008",
+      "published_at": "2026-11-11T09:00:00Z",
+      "specimen": true,
+      "source_registry": "specimen-registry.example",
+      "agent": {
+        "name": "specimen-invoice-agent",
+        "url": "https://specimen-invoice-agent.example",
+        "card_url": "https://specimen-invoice-agent.example/.well-known/agent-card.json",
+        "registry_entry_url": "https://specimen-registry.example/agents/specimen-invoice-agent",
+        "last_seen": "2026-11-11"
+      },
+      "summary": { "claims_total": 6, "claims_pass": 6, "claims_fail": 0, "claims_unverified": 0, "score": 100 },
+      "claims": [
+        { "id": "c1", "claim": "Specimen claim 1 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0008.md", "captured_at": "2026-11-11T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c2", "claim": "Specimen claim 2 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0008.md", "captured_at": "2026-11-11T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c3", "claim": "Specimen claim 3 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0008.md", "captured_at": "2026-11-11T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c4", "claim": "Specimen claim 4 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0008.md", "captured_at": "2026-11-11T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c5", "claim": "Specimen claim 5 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0008.md", "captured_at": "2026-11-11T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c6", "claim": "Specimen claim 6 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0008.md", "captured_at": "2026-11-11T09:00:00Z" }, "note": "Specimen data." }
+      ]
+    },
+    {
+      "attestation_id": "att-2026-0007",
+      "published_at": "2026-11-09T09:00:00Z",
+      "specimen": true,
+      "source_registry": "specimen-registry.example",
+      "agent": {
+        "name": "specimen-travel-agent",
+        "url": "https://specimen-travel-agent.example",
+        "card_url": "https://specimen-travel-agent.example/.well-known/agent-card.json",
+        "registry_entry_url": "https://specimen-registry.example/agents/specimen-travel-agent",
+        "last_seen": "2026-11-09"
+      },
+      "summary": { "claims_total": 4, "claims_pass": 3, "claims_fail": 1, "claims_unverified": 0, "score": 75 },
+      "claims": [
+        { "id": "c1", "claim": "Supports streaming responses", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0007.md", "captured_at": "2026-11-09T09:00:00Z" }, "note": "Specimen data: invented row, labelled specimen until replaced by real checker output." },
+        { "id": "c2", "claim": "Authenticates with OAuth 2.0", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0007.md", "captured_at": "2026-11-09T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c3", "claim": "Books multi-leg itineraries", "check_type": "behavior", "result": "pass", "evidence": { "type": "test record HT-0031", "url": "evidence/specimen/att-2026-0007.md", "captured_at": "2026-11-09T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c4", "claim": "Responds in twelve languages", "check_type": "behavior", "result": "fail", "evidence": { "type": "test record HT-0031", "url": "evidence/specimen/att-2026-0007.md", "captured_at": "2026-11-09T09:00:00Z" }, "note": "Specimen data." }
+      ]
+    },
+    {
+      "attestation_id": "att-2026-0006",
+      "published_at": "2026-11-06T09:00:00Z",
+      "specimen": true,
+      "source_registry": "specimen-registry.example",
+      "agent": {
+        "name": "specimen-support-agent",
+        "url": "https://specimen-support-agent.example",
+        "card_url": "https://specimen-support-agent.example/.well-known/agent-card.json",
+        "registry_entry_url": "https://specimen-registry.example/agents/specimen-support-agent",
+        "last_seen": "2026-11-06"
+      },
+      "summary": { "claims_total": 6, "claims_pass": 0, "claims_fail": 6, "claims_unverified": 0, "score": 0 },
+      "claims": [
+        { "id": "c1", "claim": "Specimen claim 1 (placeholder text, not a real check)", "check_type": "behavior", "result": "fail", "evidence": { "type": "test record HT-0027", "url": "evidence/specimen/att-2026-0006.md", "captured_at": "2026-11-06T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c2", "claim": "Specimen claim 2 (placeholder text, not a real check)", "check_type": "behavior", "result": "fail", "evidence": { "type": "test record HT-0027", "url": "evidence/specimen/att-2026-0006.md", "captured_at": "2026-11-06T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c3", "claim": "Specimen claim 3 (placeholder text, not a real check)", "check_type": "behavior", "result": "fail", "evidence": { "type": "test record HT-0027", "url": "evidence/specimen/att-2026-0006.md", "captured_at": "2026-11-06T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c4", "claim": "Specimen claim 4 (placeholder text, not a real check)", "check_type": "behavior", "result": "fail", "evidence": { "type": "test record HT-0027", "url": "evidence/specimen/att-2026-0006.md", "captured_at": "2026-11-06T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c5", "claim": "Specimen claim 5 (placeholder text, not a real check)", "check_type": "behavior", "result": "fail", "evidence": { "type": "test record HT-0027", "url": "evidence/specimen/att-2026-0006.md", "captured_at": "2026-11-06T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c6", "claim": "Specimen claim 6 (placeholder text, not a real check)", "check_type": "behavior", "result": "fail", "evidence": { "type": "test record HT-0027", "url": "evidence/specimen/att-2026-0006.md", "captured_at": "2026-11-06T09:00:00Z" }, "note": "Specimen data." }
+      ]
+    },
+    {
+      "attestation_id": "att-2026-0005",
+      "published_at": "2026-11-04T09:00:00Z",
+      "specimen": true,
+      "source_registry": "specimen-registry.example",
+      "agent": {
+        "name": "specimen-research-agent",
+        "url": "https://specimen-research-agent.example",
+        "card_url": "https://specimen-research-agent.example/.well-known/agent-card.json",
+        "registry_entry_url": "https://specimen-registry.example/agents/specimen-research-agent",
+        "last_seen": "2026-11-04"
+      },
+      "summary": { "claims_total": 4, "claims_pass": 4, "claims_fail": 0, "claims_unverified": 0, "score": 100 },
+      "claims": [
+        { "id": "c1", "claim": "Specimen claim 1 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0005.md", "captured_at": "2026-11-04T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c2", "claim": "Specimen claim 2 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0005.md", "captured_at": "2026-11-04T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c3", "claim": "Specimen claim 3 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0005.md", "captured_at": "2026-11-04T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c4", "claim": "Specimen claim 4 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0005.md", "captured_at": "2026-11-04T09:00:00Z" }, "note": "Specimen data." }
+      ]
+    },
+    {
+      "attestation_id": "att-2026-0004",
+      "published_at": "2026-11-02T09:00:00Z",
+      "specimen": true,
+      "source_registry": "specimen-registry.example",
+      "agent": {
+        "name": "specimen-scheduling-agent",
+        "url": "https://specimen-scheduling-agent.example",
+        "card_url": "https://specimen-scheduling-agent.example/.well-known/agent-card.json",
+        "registry_entry_url": "https://specimen-registry.example/agents/specimen-scheduling-agent",
+        "last_seen": "2026-11-02"
+      },
+      "summary": { "claims_total": 3, "claims_pass": 2, "claims_fail": 1, "claims_unverified": 0, "score": 67 },
+      "claims": [
+        { "id": "c1", "claim": "Specimen claim 1 (placeholder text, not a real check)", "check_type": "automated", "result": "pass", "evidence": { "type": "registry card", "url": "evidence/specimen/att-2026-0004.md", "captured_at": "2026-11-02T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c2", "claim": "Specimen claim 2 (placeholder text, not a real check)", "check_type": "behavior", "result": "pass", "evidence": { "type": "test record HT-0022", "url": "evidence/specimen/att-2026-0004.md", "captured_at": "2026-11-02T09:00:00Z" }, "note": "Specimen data." },
+        { "id": "c3", "claim": "Specimen claim 3 (placeholder text, not a real check)", "check_type": "behavior", "result": "fail", "evidence": { "type": "test record HT-0022", "url": "evidence/specimen/att-2026-0004.md", "captured_at": "2026-11-02T09:00:00Z" }, "note": "Specimen data." }
+      ]
+    }
+  ]
+    }
