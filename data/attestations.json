@@ -1,7 +1,217 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-13T14:50:00Z",
+ "generated_at": "2026-11-13T17:00:00Z",
  "attestations": [
+  {
+   "attestation_id": "att-2026-0054",
+   "published_at": "2026-11-13T17:00:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Metastate · Portugal real estate",
+    "url": "https://metastate.pt",
+    "card_url": "https://metastate.pt/.well-known/agent-card.json",
+    "registry_entry_url": "https://metastate.pt/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 3,
+    "claims_fail": 0,
+    "claims_unverified": 1,
+    "score": 75
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Answers a plain-text property question with matches: count, references, prices and page URLs (AMLI 3-bedroom Lisbon example)",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the pesquisar_imoveis skill",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "Probe '3-bedroom apartment for sale in Lisbon with garage': answered '3 properties found' with references (META-001009...), prices (e.g. 1.030.000 EUR for a 200 m2 T3 duplex), sizes and page URLs; structured data part carries total and the property list."
+    },
+    {
+     "id": "c2",
+     "claim": "The listing pages it returns exist on its own site",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "3 of 3 returned URLs returned HTTP 200 on metastate.pt and the URL slugs match the returned property titles; page titles load client-side, so title text was not asserted."
+    },
+    {
+     "id": "c3",
+     "claim": "Official market-price data skill answers with a sourced figure",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the consultar_precos_mercado skill",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "Probe 'Price per m2 in Cascais': answered Cascais municipality median 5.000 EUR/m2, 1st quarter 2026, naming the source (INE, Estatisticas de Precos da Habitacao ao nivel local) and the report edition. Figure not independently re-checked."
+    },
+    {
+     "id": "c4",
+     "claim": "Purchase-cost skill answers as the card describes, and contact-creating skills behave",
+     "check_type": "automated",
+     "result": "unverified",
+     "evidence": {
+      "type": "live probes of the calcular_custos_compra skill",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "The card's own plain-text example ('How much tax do I pay buying a 750,000 euro flat?') returned an input prompt for preco_eur instead of parsing the price; structured data-part probes returned no readable answer. Viewing/valuation/consultant-contact skills create real requests at the agency and were deliberately not exercised."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0055",
+   "published_at": "2026-11-13T17:00:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "TripDeDee",
+    "url": "https://tripdedee.com",
+    "card_url": "https://tripdedee.com/.well-known/agent-card.json",
+    "registry_entry_url": "https://tripdedee.com/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "find_shops answers a plain-text query with matching shops, live prices and order links",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the find_shops skill",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "Probe 'som tam in Samut Prakan': answered 5 shops, all in Samut Prakan districts (province matching correct), with today's opening hours, item prices and per-shop order URLs."
+    },
+    {
+     "id": "c2",
+     "claim": "The shop and hotel pages it returns exist and match the named businesses",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned listing URLs",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "3 of 3 returned shop URLs and 2 of 2 returned hotel URLs returned HTTP 200 with Thai page titles matching the returned shop/hotel names."
+    },
+    {
+     "id": "c3",
+     "claim": "shop_info returns the full shop profile: menu with prices, hours, location, payment and reviews",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the shop_info skill (data-part form)",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "Data-part probe for @b880 returned the full profile: 9 menu items with prices, opening hours, location/map URL, payment options and reviews. The free-text phrasing ('What does @b880 sell?') is treated as a question forwarded to the shop rather than a menu request."
+    },
+    {
+     "id": "c4",
+     "claim": "Prices are disclosed as live system prices and money-moving skills are gated behind user sign-in",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe response metadata and agent card",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "Responses carry a live-price note (Thai: prices from the real system right now) and delivery-fee handling is disclosed. place_order and hire_person require OAuth sign-in per the card; they were deliberately not exercised (no account, no spend)."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0056",
+   "published_at": "2026-11-13T17:00:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Está no Ir (Bot)",
+    "url": "https://estanoir-bots.pages.dev",
+    "card_url": "https://estanoir-bots.pages.dev/.well-known/agent-card.json",
+    "registry_entry_url": "https://estanoir-bots.pages.dev/.well-known/agent-card.json",
+    "last_seen": "2026-11-13"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "The endpoint answers every message",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probes of the /a2a endpoint",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "Two distinct plain-text messages both received a full reply within seconds."
+    },
+    {
+     "id": "c2",
+     "claim": "Returns the same fixed answer to every message, as the card states",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "comparison of two probe replies",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "Two different messages returned byte-identical replies (4,500 characters), matching the card's fixed-answer claim and its read-only promise."
+    },
+    {
+     "id": "c3",
+     "claim": "The trip links in the reply resolve and match the trips",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of returned URLs",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "The reply lists 19 published trips; 3 of 3 spot-checked trip pages returned HTTP 200 with titles matching the trips."
+    },
+    {
+     "id": "c4",
+     "claim": "Disclosures match the card: read-only notice, not a travel agency, no bookings or prices",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "probe reply and agent card",
+      "url": "evidence/att-2026-0054-singles.md",
+      "captured_at": "2026-11-13T17:00:00Z"
+     },
+     "note": "The reply states the endpoint is read-only and 'not a travel agency; no bookings; no prices', with the email route for new ideas; the affiliate disclosure (Travelpayouts links marked [affiliate]) is in the card, and the fixed reply carries no affiliate-marked links."
+    }
+   ]
+  },
   {
    "attestation_id": "att-2026-0014",
    "published_at": "2026-11-13T14:50:00Z",
