@@ -3819,6 +3819,277 @@
      "note": "Specimen data."
     }
    ]
+  },
+  {
+   "attestation_id": "att-2026-0057",
+   "published_at": "2026-11-14T08:35:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Ruzora Hiring Agent",
+    "url": "https://mcp.ruzora.com",
+    "card_url": "https://mcp.ruzora.com/.well-known/agent-card.json",
+    "registry_entry_url": "https://mcp.ruzora.com/.well-known/agent-card.json",
+    "last_seen": "2026-11-14"
+   },
+   "summary": {
+    "claims_total": 5,
+    "claims_pass": 5,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "The search skill answers a skills query with blind profiles: candidate names shown, employers withheld until an agreement is signed",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the search_vetted_engineers skill",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "Probe (Python, Postgres, Senior) returned 6 senior profiles with skills, vetting line, US-hours overlap and availability, each carrying an internal ENG- id, under the notice 'blind profiles: names and employers are shared after an agreement is signed'; no employer names appear."
+    },
+    {
+     "id": "c2",
+     "claim": "The badge-verification skill validates a badge and rejects an invalid one with an instructive message instead of a guess",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the verify_ruzora_badge skill",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "A fabricated badge link returned TASK_STATE_FAILED with 'That is not a valid Ruzora badge. Ask the user to paste the full badge link exactly as the candidate shared it.'"
+    },
+    {
+     "id": "c3",
+     "claim": "The site carries the same vetting promises as the card: scored blind shortlist within 72 hours, graded coding challenge, AI interview on camera with integrity review, 60-day replacement guarantee",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "static back-check of ruzora.com",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "Site title reads 'Ruzora - Senior LATAM Engineers, Vetted Shortlist Within 72 Hours' and the description names the graded coding challenge, the on-camera AI interview with integrity review before any shortlist, and the 60-day replacement guarantee. The 72-hour promise itself is not independently timed."
+    },
+    {
+     "id": "c4",
+     "claim": "Every URL the card publishes resolves",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-checks of all card URLs",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "5 of 5 HTTP 200: provider site, developers/mcp docs, agent-card.json on mcp.ruzora.com, logo PNG, and the /a2a JSON-RPC endpoint."
+    },
+    {
+     "id": "c5",
+     "claim": "Buyer-facing actions are gated on a verified work email and were left unexercised",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card disclosure review (gating only, no skill fired)",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "verify_work_email emails a 6-digit code and the shortlist, hiring-fit and coding-challenge skills all require a verified buyer; these create real requests or contact, so none was exercised. Read skills are open, as the card states."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0058",
+   "published_at": "2026-11-14T08:35:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "GhOsT77",
+    "url": "https://ghost77-agent.onrender.com",
+    "card_url": "https://ghost77-agent.onrender.com/.well-known/agent-card.json",
+    "registry_entry_url": "https://ghost77-agent.onrender.com/.well-known/agent-card.json",
+    "last_seen": "2026-11-14"
+   },
+   "summary": {
+    "claims_total": 6,
+    "claims_pass": 6,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "The A2A JSON-RPC endpoint answers free, as the card states ('The A2A JSON-RPC endpoint is free')",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the A2A endpoint",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "A SendMessage probe (base_protocol_health) returned the full read-only skill list with per-skill x402 prices; no payment was requested or possible on this route."
+    },
+    {
+     "id": "c2",
+     "claim": "An unpaid call to a paid x402 route returns HTTP 402 carrying the exact payment terms the card discloses",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of an x402 route without a payment header",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "POST /x402/crypto_news_digest without payment returned HTTP 402 with accepts: USDC 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 on eip155:8453, payTo 0x659db9537fee7a3473ff6e2a5a661af65ae288e3, maxAmountRequiredUSD $0.09, matching the card's USDC/Base and payout-wallet disclosures. No payment was made."
+    },
+    {
+     "id": "c3",
+     "claim": "ERC-8004 agent #348263 on Base is owned by the card's payout wallet",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "on-chain read-only ownerOf call against the ERC-8004 registry",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "eth_call ownerOf(348263) on registry 0x8004A169FB4a3325136EB29fA0ceB6D2e539a432 via a public Base RPC returned 0x659db9537fee7a3473ff6e2a5a661af65ae288e3, exactly the wallet the card names for the NFT, Virtuals ACP and every x402 payTo."
+    },
+    {
+     "id": "c4",
+     "claim": "The Virtuals ACP registration names the same payout wallet",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP read of the card's ACP registration endpoint",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "GET api.acp.virtuals.io/agents/01a159d2-.../erc8004 returned the registration record and it contains the same 0x659db9... wallet address."
+    },
+    {
+     "id": "c5",
+     "claim": "Security-review tier prices on /security/request match the card: Quick $149, Standard $449, Deep $999",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "rendered-page read of /security/request",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "The rendered page shows Quick $149, Standard $449, Deep $999 (plus Website Fix $99 and Upkeep $25/month), payable by Stripe, PayPal or USDC on Base, with an explicit 'no passwords, API keys or other secrets in the form' instruction and pay-after-scope guidance. The pricing is seller-published; no review was purchased."
+    },
+    {
+     "id": "c6",
+     "claim": "The Getaway Genie site the card links is live and carries the card's $15 search and $25 rush/multi-city pricing",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-check of getawaygenie.vercel.app",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "The page shows '$15 Deal Search' and '$25 Rush / Multi-city' as card/PayPal options, and the text 'Choose $15 or $25 Rush'. No purchase was made."
+    }
+   ],
+   "note": "Observation, not a claim failure: the single card markets four distinct businesses (read-only crypto data jobs, Virtuals ACP services, security reviews, Getaway Genie) and a GHOST77 token usage fee; settlement through facilitator.payai.network and all paid skills were left unexercised. iconUrl logo.png is a 1x1 placeholder. BotsRated's independent check of the same host measured 12/12 probes ok since Nov 1 (att-2026-0059)."
+  },
+  {
+   "attestation_id": "att-2026-0059",
+   "published_at": "2026-11-14T08:35:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "BotsRated",
+    "url": "https://botsrated.com",
+    "card_url": "https://botsrated.com/.well-known/agent-card.json",
+    "registry_entry_url": "https://botsrated.com/.well-known/agent-card.json",
+    "last_seen": "2026-11-14"
+   },
+   "summary": {
+    "claims_total": 6,
+    "claims_pass": 6,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "The coverage skill returns live store statistics, not static marketing",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the coverage skill",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "Answered 5,609 hosts covered, store 'live (Cloudflare D1), updated by the cron prober', last probe run 2026-11-14T08:33 UTC, minutes before this probe."
+    },
+    {
+     "id": "c2",
+     "claim": "The free find skill returns covered sellers with a factual reason, measured numbers and a page URL each",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the find skill",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "Query 'web search' returned x402serps.com (20/20 recent test calls, ~147 ms p50, $0.004 per call) and search.neurobird.com, each with a matching_routes reason and a botsrated.com/s/ page URL."
+    },
+    {
+     "id": "c3",
+     "claim": "The free-tier check skill returns measured facts for a host with receipt links",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the check skill on a third-party host",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "check(host=ghost77-agent.onrender.com) returned 12/12 probes ok since 2026-11-01, last ok 2026-11-13, MCP protocol 2025-06-18, 27 tools with a tools_sha256, plus dated receipt URLs. Read-only; no payment."
+    },
+    {
+     "id": "c4",
+     "claim": "receipt-verify validates a stored receipt's signature and is free",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the receipt-verify skill on a returned receipt",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "Verifying a returned receipt URL answered valid:true, key_id botsrated-prober-1, charged:false."
+    },
+    {
+     "id": "c5",
+     "claim": "Responses label seller-supplied text as untrusted and carry a facts-only notice instead of scores or grades",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "response inspection across the probes",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "Every answer carries an untrusted_seller_text block naming the exact seller-supplied fields, and a note 'Facts only: measurements with timestamps and receipt ids. Not an endorsement or accusation.'"
+    },
+    {
+     "id": "c6",
+     "claim": "The published methodology matches the behaviour the probes showed",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "static back-check of botsrated.com/methodology",
+      "url": "evidence/att-2026-0057-tier3.md",
+      "captured_at": "2026-11-14T08:35:00Z"
+     },
+     "note": "The page states one unpaid request per route about every 40 minutes from a Cloudflare cron prober, ed25519-signed receipts, capped small test purchases, and a /disputes route."
+    }
+   ]
   }
  ]
 }
