@@ -2,7 +2,7 @@
 
 ## What this site collects
 
-Aggregate, cookieless analytics only: page views counted in total, with no way to identify individual visitors.
+This site uses Plausible, privacy-friendly analytics with no cookies and no personal data collection: page views counted in aggregate only, with no way to identify individual visitors.
 
 ## What this site never collects
 
