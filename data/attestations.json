@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-13T17:00:00Z",
+ "generated_at": "2026-11-19T18:34:38Z",
  "attestations": [
   {
    "attestation_id": "att-2026-0054",
@@ -86,10 +86,10 @@
    },
    "summary": {
     "claims_total": 4,
-    "claims_pass": 4,
+    "claims_pass": 3,
     "claims_fail": 0,
-    "claims_unverified": 0,
-    "score": 100
+    "claims_unverified": 1,
+    "score": 75
    },
    "claims": [
     {
@@ -132,7 +132,7 @@
      "id": "c4",
      "claim": "Prices are disclosed as live system prices and money-moving skills are gated behind user sign-in",
      "check_type": "automated",
-     "result": "pass",
+     "result": "unverified",
      "evidence": {
       "type": "probe response metadata and agent card",
       "url": "evidence/att-2026-0054-singles.md",
@@ -156,10 +156,10 @@
    },
    "summary": {
     "claims_total": 4,
-    "claims_pass": 4,
+    "claims_pass": 3,
     "claims_fail": 0,
-    "claims_unverified": 0,
-    "score": 100
+    "claims_unverified": 1,
+    "score": 75
    },
    "claims": [
     {
@@ -190,7 +190,7 @@
      "id": "c3",
      "claim": "The trip links in the reply resolve and match the trips",
      "check_type": "automated",
-     "result": "pass",
+     "result": "unverified",
      "evidence": {
       "type": "HTTP spot-check of returned URLs",
       "url": "evidence/att-2026-0054-singles.md",
@@ -4092,4 +4092,4 @@
    ]
   }
  ]
-}
+    }
