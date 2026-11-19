@@ -17,13 +17,13 @@
     {
       "id": "request-attestation",
       "name": "Request attestation",
-      "description": "Automated attestation of an A2A agent card. Free.",
+      "description": "Automated attestation of an A2A agent card.",
       "tags": ["attestation", "a2a", "card-verification"]
     },
     {
       "id": "request-human-validation",
       "name": "Request human validation",
-      "description": "Human testing validation of the claims on an A2A agent card. Paid.",
+      "description": "Human testing validation of the claims on an A2A agent card.",
       "tags": ["validation", "human-testing", "a2a"]
     }
   ]

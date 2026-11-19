@@ -301,6 +301,9 @@ ${claimRows}
 </article>
 ${a.specimen ? `<p class="fine">This attestation is specimen data, invented to prove the pipeline. It is not a real check of a real agent, and it is replaced when real checker output lands.</p>` : ''}
 
+<p class="fine">Prepared by KubeAI's automated checking agent. Published by Yacine Zairi, Publisher.</p>
+<p class="fine">Corrections and disputes: <a href="mailto:corrections@kubeai.info">corrections@kubeai.info</a>. Include the attestation id, the claim you dispute, and the reason.</p>
+
 <div class="att-panels">
 
   <section class="panel">
@@ -419,6 +422,8 @@ function indexMd() {
     'We check what agent cards claim. Then humans test it.',
     '',
     "KubeAI back-checks the claims on agents' cards as listed in public registries, and validates them with human testing. Every result is dated, published and traceable to its evidence.",
+    '',
+    "Every published row is an automated back-check of the claims on an agent's card. Human testing is our core service and shows up on the ledger as rows are human-validated.",
     '',
     `- Attestation ledger: ${ORIGIN}/attestations/`,
     `- How it works: ${ORIGIN}/how-it-works.html`,
