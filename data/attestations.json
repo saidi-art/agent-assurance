@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-19T18:34:38Z",
+ "generated_at": "2026-11-21T18:06:00Z",
  "attestations": [
   {
    "attestation_id": "att-2026-0054",
@@ -4088,6 +4088,368 @@
       "captured_at": "2026-11-14T08:35:00Z"
      },
      "note": "The page states one unpaid request per route about every 40 minutes from a Cloudflare cron prober, ed25519-signed receipts, capped small test purchases, and a /disputes route."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0060",
+   "published_at": "2026-11-21T18:06:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "agentsvc.io",
+    "url": "https://agentsvc.io",
+    "card_url": "https://agentsvc.io/.well-known/agent-card.json",
+    "registry_entry_url": "https://agentsvc.io/a2a",
+    "last_seen": "2026-11-21"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Every URL the card publishes resolves",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-checks of all card URLs",
+      "url": "https://agentsvc.io/.well-known/agent-card.json",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "3 of 3 HTTP 200: provider site agentsvc.io, llms-full.txt (219,652 bytes), favicon.ico."
+    },
+    {
+     "id": "c2",
+     "claim": "The card advertises 127 pay-per-call services and enumerates exactly 127 unique skills, matching the docs",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card/docs catalog comparison",
+      "url": "https://agentsvc.io/llms-full.txt",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "Card carries 127 skill entries, all unique; the docs page indexes the same catalog under 'Services (127)'; skills' tags and endpoints are internally consistent."
+    },
+    {
+     "id": "c3",
+     "claim": "Free sample endpoints run with the documented example inputs, and only with them, at no cost",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the free sample endpoint",
+      "url": "https://agentsvc.io/api/v1/try/web-scrape",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "POST /api/v1/try/web-scrape with the example input fetched example.com live (HTTP 200, 65 ms, trial.free=true). The same try route with a non-example input refused with 403 trial_example_input_only and an instructive message naming the paid price ($0.002 USDC/call)."
+    },
+    {
+     "id": "c4",
+     "claim": "Paid skills are x402-gated and were left unexercised",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card disclosure review (gating only, no skill fired)",
+      "url": "https://agentsvc.io/.well-known/agent-card.json",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "All proxy endpoints route through paid x402 proxy routes; no payment was made and no paid skill was fired during this check."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0061",
+   "published_at": "2026-11-21T18:06:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Ni Biashara Shelves",
+    "url": "https://agents.nibiashara.biz",
+    "card_url": "https://agents.nibiashara.biz/.well-known/agent-card.json",
+    "registry_entry_url": "https://agents.nibiashara.biz/a2a",
+    "last_seen": "2026-11-21"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Every URL the card publishes resolves",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-checks of all card URLs",
+      "url": "https://agents.nibiashara.biz/.well-known/agent-card.json",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "3 of 3 HTTP 200: provider site nibiashara.biz, the docs page at agents.nibiashara.biz/docs?ref=agent-card, favicon.svg."
+    },
+    {
+     "id": "c2",
+     "claim": "The official-rate skill is live, priced as documented, and sourced from Frankfurter as the card states",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the free FX sample",
+      "url": "https://agents.nibiashara.biz/fx/sample/fx-official",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "The free preview returned a live USD-KES rate of 130.02 as of 2026-11-21, priced sample $0.01 for the paid route, naming frankfurter.dev as source. Frankfurter's public provider index confirms it carries KES through the Central Bank of Kenya's daily indicative rate (1 of 21 KES-covering providers among 112). The exact figure was not independently recomputed."
+    },
+    {
+     "id": "c3",
+     "claim": "The street (parallel-market) rate is derived from Bybit's public USDT/fiat P2P order book, as the card states",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "static back-check of the parallel-rate docs page",
+      "url": "https://agents.nibiashara.biz/docs/fx-parallel",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "The /docs/fx-parallel page states the same derivation verbatim: median VWAP of Bybit's public USDT/fiat P2P order book divided by a USDT/USD spot basis, plus the Frankfurter official reference rate and the spread. The live paid route was not exercised."
+    },
+    {
+     "id": "c4",
+     "claim": "Free tools exist at $0.00 alongside the paid shelves, as the docs table shows",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "static back-check of the docs pricing table",
+      "url": "https://agents.nibiashara.biz/docs?ref=agent-card",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "The docs table lists free tools at $0.00 (e.g. US-to-Nigeria air shipping estimate from Doos Logistics public rates) explicitly marked 'no payment, not x402'."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0062",
+   "published_at": "2026-11-21T18:06:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Coin Railz",
+    "url": "https://coinrailz.com",
+    "card_url": "https://coinrailz.com/.well-known/agent-card.json",
+    "registry_entry_url": "https://coinrailz.com/a2a/v1",
+    "last_seen": "2026-11-21"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Every URL the card publishes resolves",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-checks of all card URLs",
+      "url": "https://coinrailz.com/.well-known/agent-card.json",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "3 of 3 HTTP 200: provider site coinrailz.com, agent-instructions.json, favicon.ico."
+    },
+    {
+     "id": "c2",
+     "claim": "The x402 Discovery Ping is free to hit and returns a 402 challenge with valid payment requirements, as the card claims",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the x402 ping endpoint",
+      "url": "https://coinrailz.com/x402/ping",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "GET /x402/ping without a payment header answered HTTP 402 with an x402 v2 challenge: Payment-Required header carrying EIP-712 requirements (scheme exact, network eip155:8453 Base, 250,000 units = $0.25 USDC, 30 s timeout) plus X-Payment-Network and X-Payment-Price headers. No payment was made."
+    },
+    {
+     "id": "c3",
+     "claim": "The service advertises 80 pay-per-call services and the card enumerates exactly 80",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card/docs catalog comparison",
+      "url": "https://coinrailz.com/.well-known/agent-instructions.json",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "Card carries 80 unique skills; the agent-instructions.json guide and the site copy both reference the same count ('all 80 services')."
+    },
+    {
+     "id": "c4",
+     "claim": "A free $5 trial key is offered with no payment and no account, and was left unclaimed",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card disclosure review (gating only, no signup fired)",
+      "url": "https://coinrailz.com/.well-known/agent-instructions.json",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "The guide documents the free trial endpoint (GET /api/m2m/credits/trial, 1 per IP per 7 days). Claiming it would consume this host's once-per-week allocation and mint a credential, so it was left unexercised."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0063",
+   "published_at": "2026-11-21T18:06:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Duo Data Utilities",
+    "url": "https://api.duoleads.com",
+    "card_url": "https://api.duoleads.com/.well-known/agent-card.json",
+    "registry_entry_url": "https://api.duoleads.com/a2a",
+    "last_seen": "2026-11-21"
+   },
+   "summary": {
+    "claims_total": 4,
+    "claims_pass": 4,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Every URL the card publishes resolves",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-checks of all card URLs",
+      "url": "https://api.duoleads.com/.well-known/agent-card.json",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "3 of 3 HTTP 200: provider base api.duoleads.com, the docs page, logo.png."
+    },
+    {
+     "id": "c2",
+     "claim": "The card advertises 33 independent pay-per-call utilities and enumerates exactly 33",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card/docs catalog comparison",
+      "url": "https://api.duoleads.com/docs",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "Card carries 33 unique skills spanning identifiers, time, text, encodings, geodesy, blockchain primitives and reference tables; the docs index the same set."
+    },
+    {
+     "id": "c3",
+     "claim": "Utilities are deterministic and need no API key, as the card and docs both state, at $0.05 per call",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "static back-check of the docs pricing and gating copy",
+      "url": "https://api.duoleads.com/docs",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "The docs page states $0.05 per call throughout and marks validators deterministic / no-api-key; the card's skill tags carry the same markers."
+    },
+    {
+     "id": "c4",
+     "claim": "Paid validators were left unexercised",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card disclosure review (gating only, no skill fired)",
+      "url": "https://api.duoleads.com/.well-known/agent-card.json",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "Every utility is pay-per-call with no free sample route; no payment was made during this check."
+    }
+   ]
+  },
+  {
+   "attestation_id": "att-2026-0064",
+   "published_at": "2026-11-21T18:06:00Z",
+   "specimen": false,
+   "source_registry": "a2aregistry.org",
+   "agent": {
+    "name": "Name Whisper",
+    "url": "https://namewhisper.ai",
+    "card_url": "https://namewhisper.ai/a2a",
+    "registry_entry_url": "https://namewhisper.ai/a2a",
+    "last_seen": "2026-11-21"
+   },
+   "summary": {
+    "claims_total": 5,
+    "claims_pass": 5,
+    "claims_fail": 0,
+    "claims_unverified": 0,
+    "score": 100
+   },
+   "claims": [
+    {
+     "id": "c1",
+     "claim": "Every URL the card publishes resolves",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "HTTP spot-checks of all card URLs",
+      "url": "https://namewhisper.ai/a2a",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "2 of 2 HTTP 200: provider site namewhisper.ai and llms-full.txt (11,057 bytes)."
+    },
+    {
+     "id": "c2",
+     "claim": "The card advertises 44 tools and the docs index exactly 44",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card/docs catalog comparison",
+      "url": "https://namewhisper.ai/llms-full.txt",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "Card carries 44 unique skills; the llms-full.txt tool index reads 'Tool index (44 tools)' with the same grouping (discovery, intelligence, commerce, management)."
+    },
+    {
+     "id": "c3",
+     "claim": "Read tools are free and answer live through the A2A endpoint",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "live probe of the availability read skill",
+      "url": "https://namewhisper.ai/a2a",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "An A2A message/send availability check on a test name returned a real answer in seconds: the name is unregistered and available at the $8/yr base price with no premium or existing owner."
+    },
+    {
+     "id": "c4",
+     "claim": "The stated corpus scale (3.5M indexed ENS names, 869K currently registered) matches the card and docs",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card/docs copy comparison",
+      "url": "https://namewhisper.ai/llms-full.txt",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "Both the card and the docs state 3.5M indexed with 869K currently registered. The corpus size was not independently timed against public ENS statistics."
+    },
+    {
+     "id": "c5",
+     "claim": "Commerce and management skills (registration, renewal, listing) are transactional and were left unexercised",
+     "check_type": "automated",
+     "result": "pass",
+     "evidence": {
+      "type": "card disclosure review (gating only, no transaction fired)",
+      "url": "https://namewhisper.ai/llms-full.txt",
+      "captured_at": "2026-11-21T18:06:00Z"
+     },
+     "note": "The docs mark purchase_name and renew_ens_name as transaction skills; firing one would move real on-chain assets, so none was exercised."
     }
    ]
   }
