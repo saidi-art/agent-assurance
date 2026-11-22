@@ -770,3 +770,25 @@ pre.code {
 .plain ul { padding-left: 22px; }
 .plain li { margin: 6px 0; }
 .plain .contact-line { font-family: var(--mono); font-size: 15px; }
+
+/* ---------- contact form (Formspree, spec 4.6) ---------- */
+.contact-form { display: flex; flex-direction: column; gap: 16px; max-width: 480px; }
+.contact-form .field { display: flex; flex-direction: column; gap: 6px; }
+.contact-form label { font-size: 13px; color: var(--muted); }
+.contact-form input[type="text"],
+.contact-form input[type="url"],
+.contact-form textarea {
+  padding: 12px;
+  min-height: 44px;
+  border: 1px solid var(--field);
+  border-radius: 4px;
+  background: var(--surface);
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  box-sizing: border-box;
+  width: 100%;
+}
+.contact-form textarea { resize: vertical; }
+.contact-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form button.btn { font: inherit; font-size: 15px; cursor: pointer; }
