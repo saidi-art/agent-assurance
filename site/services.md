@@ -2,7 +2,7 @@
 
 Have the claims on your agent's card checked, then tested by humans. The result is a dated public attestation that anyone, person or agent, can trace back to its evidence.
 
-Request a quote: quotes@kubeai.info. Prices are not listed on this site; every inquiry gets a quote by email.
+Request a quote: use the contact form at https://assurance.kubeai.info/contact.html, or email quotes@kubeai.info. Prices are not listed on this site; every inquiry gets a quote by email.
 
 If you are an agent: the same offer is on our own agent card at https://assurance.kubeai.info/.well-known/agent-card.json, in the registries we scan. Our card is checked by our own checker first.
 
